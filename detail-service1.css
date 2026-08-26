@@ -1,0 +1,798 @@
+/* =========================================================
+   DETAIL SERVICE
+   NIKI SEKAWAN PONDASI
+========================================================= */
+
+
+/* =========================================================
+   DETAIL HERO
+========================================================= */
+
+.detail-hero {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 82px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.96),
+            rgba(2, 2, 2, 0.72)
+        ),
+        url("BORE\ PILE\ HYDRAULIC.jpeg") center / cover no-repeat;
+
+    color: var(--white);
+}
+
+.detail-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(244, 197, 66, 0.07),
+            transparent
+        );
+}
+
+.detail-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.detail-hero-content > span {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--yellow);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.detail-hero h1 {
+    max-width: 800px;
+
+    margin-bottom: 20px;
+
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.detail-hero h1 strong {
+    display: block;
+
+    color: var(--yellow);
+}
+
+.detail-hero-content > p {
+    max-width: 650px;
+
+    margin-bottom: 25px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* BREADCRUMB */
+
+.detail-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    font-size: 10px;
+}
+
+.detail-breadcrumb a {
+    color: rgba(255, 255, 255, 0.65);
+
+    transition: var(--transition);
+}
+
+.detail-breadcrumb a:hover {
+    color: var(--yellow);
+}
+
+.detail-breadcrumb i {
+    color: var(--yellow);
+
+    font-size: 8px;
+}
+
+.detail-breadcrumb span {
+    color: var(--white);
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   DETAIL ABOUT
+========================================================= */
+
+.detail-about {
+    padding: 110px 0;
+    background: var(--white);
+}
+
+.detail-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+
+/* =========================================================
+   DETAIL IMAGE
+========================================================= */
+
+.detail-image {
+    position: relative;
+    width: 100%;
+}
+
+.detail-image::before {
+    content: "";
+
+    position: absolute;
+
+    top: -15px;
+    left: -15px;
+
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid var(--yellow);
+
+    border-radius: var(--radius-lg);
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   IMAGE - FULL, TIDAK ZOOM & TIDAK CROP
+========================================================= */
+
+.detail-image img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    max-height: 600px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow);
+
+    background: var(--white);
+}
+
+
+/* =========================================================
+   DETAIL CONTENT
+========================================================= */
+
+.detail-content {
+    position: relative;
+    z-index: 2;
+}
+
+.detail-label {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--green);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   DETAIL TITLE
+========================================================= */
+
+.detail-content h2,
+.usage-title h2,
+.detail-spec-heading h2,
+.detail-cta h2 {
+    margin-bottom: 22px;
+
+    color: var(--green-dark);
+
+    font-size: clamp(30px, 4vw, 43px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+.detail-content h2 strong,
+.usage-title h2 strong,
+.detail-spec-heading h2 strong,
+.detail-cta h2 strong {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   DETAIL TEXT
+========================================================= */
+
+.detail-content p {
+    margin-bottom: 17px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   DETAIL BUTTON
+========================================================= */
+
+.detail-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 50px;
+
+    margin-top: 10px;
+
+    padding: 0 22px;
+
+    background: var(--green-dark);
+    color: var(--white);
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.detail-button:hover {
+    background: var(--yellow);
+
+    color: var(--green-dark);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .detail-about {
+        padding: 80px 0;
+    }
+
+    .detail-about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .detail-image {
+        max-width: 750px;
+
+        margin: 0 auto;
+    }
+
+    .detail-image img {
+        width: 100%;
+
+        max-height: 520px;
+    }
+
+    .detail-content {
+        max-width: 750px;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .detail-about {
+        padding: 65px 0;
+    }
+
+    .detail-about-grid {
+        gap: 40px;
+    }
+
+    .detail-image {
+        width: calc(100% - 15px);
+
+        margin-left: 15px;
+    }
+
+    .detail-image::before {
+        top: -10px;
+        left: -10px;
+    }
+
+    .detail-image img {
+        width: 100%;
+
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
+    }
+
+    .detail-content h2,
+    .usage-title h2,
+    .detail-spec-heading h2,
+    .detail-cta h2 {
+        font-size: 30px;
+
+        letter-spacing: -0.5px;
+    }
+
+    .detail-content p {
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+    .detail-button {
+        width: 100%;
+
+        min-height: 48px;
+    }
+}
+
+
+/* =========================================================
+   USAGE / ADVANTAGE
+========================================================= */
+
+.detail-usage {
+    padding: 90px 0;
+
+    background: var(--bg);
+}
+
+.detail-usage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.usage-title p {
+    max-width: 530px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.usage-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.usage-item {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 15px 20px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+}
+
+.usage-item:hover {
+    transform: translateX(7px);
+
+    border-color: var(--yellow);
+}
+
+.usage-item i {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--green-dark);
+    color: var(--yellow);
+
+    border-radius: 8px;
+}
+
+.usage-item span {
+    color: var(--green-dark);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   SPECIFICATION
+========================================================= */
+
+.detail-spec {
+    padding: 110px 0;
+
+    background: var(--white);
+}
+
+.detail-spec-heading {
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+.spec-table {
+    max-width: 900px;
+
+    margin: auto;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+}
+
+.spec-row {
+    min-height: 65px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+
+    align-items: center;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.spec-row:last-child {
+    border-bottom: 0;
+}
+
+.spec-row:nth-child(even) {
+    background: var(--bg);
+}
+
+.spec-row span,
+.spec-row strong {
+    padding: 16px 22px;
+
+    font-size: 11px;
+}
+
+.spec-row span {
+    color: var(--text-light);
+}
+
+.spec-row strong {
+    color: var(--green-dark);
+}
+
+
+/* =========================================================
+   DETAIL CTA
+========================================================= */
+
+.detail-cta {
+    position: relative;
+
+    padding: 100px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.97),
+            rgba(0, 0, 0, 0.88)
+        );
+        
+
+    color: var(--white);
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.detail-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    top: -180px;
+    right: -100px;
+
+    border: 70px solid rgba(244, 197, 66, 0.08);
+
+    border-radius: 50%;
+}
+
+.detail-cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    bottom: -150px;
+    left: -80px;
+
+    border: 50px solid rgba(255, 255, 255, 0.04);
+
+    border-radius: 50%;
+}
+
+.detail-cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.detail-cta-content > span {
+    color: var(--yellow);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.detail-cta h2 {
+    max-width: 750px;
+
+    margin: 15px auto;
+
+    color: var(--white);
+}
+
+.detail-cta h2 strong {
+    color: var(--yellow);
+}
+
+.detail-cta p {
+    max-width: 650px;
+
+    margin: 0 auto 28px;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 13px;
+}
+
+.detail-cta .detail-button {
+    background: var(--yellow);
+    color: var(--green-dark);
+}
+
+.detail-cta .detail-button:hover {
+    background: var(--white);
+}
+
+
+/* =========================================================
+   DETAIL FOOTER
+========================================================= */
+
+.detail-service-footer {
+    background: #000000;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .detail-about-grid,
+    .detail-usage-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .detail-image {
+        max-width: 700px;
+    }
+
+    .detail-image img {
+        height: 500px;
+    }
+
+    .usage-title {
+        max-width: 700px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .detail-hero {
+        min-height: 560px;
+
+        padding-top: 72px;
+    }
+
+    .detail-hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .detail-hero-content > p {
+        font-size: 12px;
+    }
+
+    .detail-about {
+        padding: 70px 0;
+    }
+
+    .detail-image {
+        margin-left: 10px;
+    }
+
+    .detail-image::before {
+        top: -10px;
+        left: -10px;
+    }
+
+    .detail-image img {
+        height: 380px;
+    }
+
+    .detail-content h2,
+    .usage-title h2,
+    .detail-spec-heading h2,
+    .detail-cta h2 {
+        font-size: 30px;
+    }
+
+    .detail-content p {
+        font-size: 12px;
+    }
+
+    .detail-usage {
+        padding: 70px 0;
+    }
+
+    .detail-spec {
+        padding: 70px 0;
+    }
+
+    .spec-row {
+        grid-template-columns: 1fr;
+    }
+
+    .spec-row span {
+        padding-bottom: 4px;
+
+        font-size: 9px;
+        font-weight: 700;
+
+        color: var(--green);
+    }
+
+    .spec-row strong {
+        padding-top: 4px;
+
+        font-size: 11px;
+    }
+
+    .detail-cta {
+        padding: 75px 0;
+    }
+
+    .detail-cta p {
+        font-size: 12px;
+    }
+
+    .detail-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .detail-hero h1 {
+        font-size: 34px;
+    }
+
+    .detail-image img {
+        height: 320px;
+    }
+
+    .detail-image {
+        margin-left: 7px;
+    }
+
+    .usage-item {
+        min-height: 65px;
+
+        padding: 12px 15px;
+    }
+
+    .usage-item i {
+        width: 38px;
+        height: 38px;
+    }
+
+    .usage-item span {
+        font-size: 10px;
+    }
+}
