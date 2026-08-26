@@ -193,8 +193,8 @@ ul {
 }
 
 .logo-icon {
-    width: 44px;
-    height: 44px;
+    width: 60px;
+    height: 60px;
 
     flex-shrink: 0;
 
@@ -203,10 +203,7 @@ ul {
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
-
-    background: var(--green-dark);
-    color: var(--yellow);
+    border-radius: 0;
 
     overflow: hidden;
 }
@@ -2524,6 +2521,207 @@ ul {
         right: 15px;
         bottom: 15px;
     }
+}
+
+/* =========================================================
+   FIX MOBILE NAVBAR
+========================================================= */
+
+.menu-toggle {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        position: relative;
+        z-index: 9999;
+
+        height: 72px;
+    }
+
+
+    /* CONTAINER */
+
+    .nav-container {
+        position: relative;
+
+        height: 72px;
+
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        font-size: 11px;
+    }
+
+
+    .logo-icon {
+        width: 39px;
+        height: 39px;
+
+        flex-shrink: 0;
+    }
+
+
+    .logo-icon img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+    ===================================================== */
+
+    .menu-toggle {
+        display: flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        margin-left: auto;
+
+        padding: 0;
+
+        border: none;
+
+        background: transparent;
+
+        color: var(--green-dark);
+
+        font-size: 22px;
+
+        cursor: pointer;
+
+        z-index: 10000;
+    }
+
+
+    .menu-toggle i {
+        display: block;
+
+        font-size: 22px;
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    .nav-menu {
+        position: absolute;
+
+        top: 72px;
+
+        left: 15px;
+        right: 15px;
+
+        display: flex !important;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px;
+
+        background: #ffffff;
+
+        border: 1px solid #dddddd;
+
+        border-radius: 12px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition: all 0.25s ease;
+
+        z-index: 9999;
+    }
+
+
+    /* =====================================================
+       MENU AKTIF
+    ===================================================== */
+
+    .navbar.active .nav-menu {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+
+    /* =====================================================
+       LINK
+    ===================================================== */
+
+    .nav-menu a {
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 15px;
+
+        color: var(--green-dark);
+
+        font-size: 13px;
+
+        font-weight: 700;
+
+        border-radius: 7px;
+    }
+
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        background: var(--bg);
+
+        color: var(--green);
+    }
+
+
+    /* HILANGKAN GARIS NAV DESKTOP */
+
+    .nav-menu a::after {
+        display: none !important;
+    }
+
+
+    /* HILANGKAN BUTTON KONSULTASI */
+
+    .nav-button {
+        display: none !important;
+    }
+
 }
 
 

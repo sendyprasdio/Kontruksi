@@ -1,16 +1,10 @@
 /* =========================================================
-   DETAIL SERVICE
-   NIKI SEKAWAN PONDASI
-   Responsive: Desktop / Tablet / Mobile
-========================================================= */
-
-
-/* =========================================================
    DETAIL HERO
 ========================================================= */
 
 .detail-hero {
     position: relative;
+
     min-height: 520px;
 
     display: flex;
@@ -24,7 +18,7 @@
             rgba(0, 0, 0, 0.96),
             rgba(2, 2, 2, 0.72)
         ),
-        url("BORE PILE HYDRAULIC.jpeg") center center / cover no-repeat;
+        url("Gambarsedotlumpur.jfif") center center / cover no-repeat;
 
     color: var(--white);
 
@@ -33,6 +27,7 @@
 
 .detail-hero-overlay {
     position: absolute;
+
     inset: 0;
 
     background:
@@ -47,6 +42,7 @@
 
 .detail-hero-content {
     position: relative;
+
     z-index: 2;
 
     width: 100%;
@@ -63,6 +59,7 @@
     font-weight: 800;
 
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
@@ -74,6 +71,7 @@
     color: var(--white);
 
     font-size: clamp(40px, 6vw, 65px);
+
     line-height: 1.05;
 
     letter-spacing: -2px;
@@ -93,6 +91,7 @@
     color: rgba(255, 255, 255, 0.75);
 
     font-size: 14px;
+
     line-height: 1.8;
 }
 
@@ -103,7 +102,9 @@
 
 .detail-breadcrumb {
     display: flex;
+
     align-items: center;
+
     flex-wrap: wrap;
 
     gap: 10px;
@@ -151,7 +152,9 @@
 .detail-about-grid {
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
     gap: 70px;
 
@@ -160,18 +163,23 @@
 
 
 /* =========================================================
-   DETAIL IMAGE
+   DETAIL IMAGE WRAPPER
 ========================================================= */
 
 .detail-image {
     position: relative;
 
-    width: 100%;
+    width: 90%;
 
     padding: 15px;
 
     isolation: isolate;
 }
+
+
+/* =========================================================
+   YELLOW BORDER DECORATION
+========================================================= */
 
 .detail-image::before {
     content: "";
@@ -191,13 +199,23 @@
     z-index: -1;
 }
 
+
+/* =========================================================
+   DETAIL IMAGE
+   - TIDAK CROP
+   - TIDAK GEPENG
+   - MENGIKUTI RASIO ASLI
+========================================================= */
+
 .detail-image img {
     position: relative;
+
     z-index: 1;
 
     display: block;
 
     width: 100%;
+
     height: auto;
 
     max-width: 100%;
@@ -208,10 +226,6 @@
 
     background: var(--white);
 
-    /*
-       Jangan gunakan height tetap.
-       Supaya gambar tidak crop.
-    */
     object-fit: contain;
 }
 
@@ -222,6 +236,7 @@
 
 .detail-content {
     position: relative;
+
     z-index: 2;
 
     min-width: 0;
@@ -235,9 +250,11 @@
     color: var(--green);
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 2px;
+
     text-transform: uppercase;
 }
 
@@ -293,6 +310,7 @@
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 10px;
@@ -308,9 +326,11 @@
     color: var(--white);
 
     border: 0;
+
     border-radius: 7px;
 
     font-size: 11px;
+
     font-weight: 700;
 
     text-decoration: none;
@@ -344,7 +364,9 @@
 .detail-usage-grid {
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
     gap: 80px;
 
@@ -412,11 +434,13 @@
 
 .usage-item i {
     width: 42px;
+
     height: 42px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     flex-shrink: 0;
@@ -432,6 +456,7 @@
     color: var(--green-dark);
 
     font-size: 12px;
+
     font-weight: 700;
 
     line-height: 1.5;
@@ -470,11 +495,12 @@
 
 
 /* =========================================================
-   SPEC TABLE
+   SPECIFICATION TABLE
 ========================================================= */
 
 .spec-table {
     width: 100%;
+
     max-width: 900px;
 
     margin: 0 auto;
@@ -555,9 +581,11 @@
     position: absolute;
 
     width: 350px;
+
     height: 350px;
 
     top: -180px;
+
     right: -100px;
 
     border: 70px solid rgba(244, 197, 66, 0.08);
@@ -573,9 +601,11 @@
     position: absolute;
 
     width: 250px;
+
     height: 250px;
 
     bottom: -150px;
+
     left: -80px;
 
     border: 50px solid rgba(255, 255, 255, 0.04);
@@ -597,6 +627,7 @@
     color: var(--yellow);
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 2px;
@@ -652,7 +683,7 @@
 
 /* =========================================================
    TABLET
-   <= 1000px
+   MAX WIDTH 1000px
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -681,6 +712,14 @@
         max-width: 750px;
 
         margin: 0 auto;
+
+        padding: 15px;
+    }
+
+    .detail-image img {
+        width: 100%;
+
+        height: auto;
     }
 
     .detail-content {
@@ -700,6 +739,8 @@
     }
 
     .usage-list {
+        width: 100%;
+
         max-width: 750px;
 
         margin: 0 auto;
@@ -717,12 +758,14 @@
 
 /* =========================================================
    MOBILE
-   <= 768px
+   MAX WIDTH 768px
 ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .detail-hero {
         min-height: 560px;
@@ -736,6 +779,8 @@
         max-width: 100%;
 
         font-size: 42px;
+
+        line-height: 1.08;
 
         letter-spacing: -1px;
     }
@@ -755,7 +800,9 @@
     }
 
 
-    /* ABOUT */
+    /* =========================
+       ABOUT
+    ========================= */
 
     .detail-about {
         padding: 70px 0;
@@ -766,9 +813,17 @@
     }
 
 
-    /* IMAGE */
+    /* =========================
+       IMAGE MOBILE
+    ========================= */
 
     .detail-image {
+
+        /*
+         * Tetap beri ruang untuk
+         * border kuning
+         */
+
         width: calc(100% - 10px);
 
         margin-left: 10px;
@@ -777,27 +832,46 @@
     }
 
     .detail-image::before {
+
         top: 0;
+
         left: 0;
 
         width: calc(100% - 10px);
+
         height: calc(100% - 10px);
 
         border-width: 2px;
+
+        border-radius: 12px;
     }
 
     .detail-image img {
+
+        display: block;
+
         width: 100%;
 
         height: auto;
 
-        max-height: none;
+        max-width: 100%;
+
+        /*
+         * Tidak ada height tetap.
+         * Jadi tidak crop dan tidak gepeng.
+         */
 
         object-fit: contain;
+
+        border-radius: 10px;
+
+        box-shadow: var(--shadow);
     }
 
 
-    /* CONTENT */
+    /* =========================
+       CONTENT
+    ========================= */
 
     .detail-content h2,
     .usage-title h2,
@@ -805,6 +879,8 @@
     .detail-cta h2 {
 
         font-size: 30px;
+
+        line-height: 1.2;
 
         letter-spacing: -0.5px;
     }
@@ -816,7 +892,9 @@
     }
 
 
-    /* BUTTON */
+    /* =========================
+       BUTTON
+    ========================= */
 
     .detail-button {
         width: 100%;
@@ -825,7 +903,9 @@
     }
 
 
-    /* USAGE */
+    /* =========================
+       USAGE
+    ========================= */
 
     .detail-usage {
         padding: 70px 0;
@@ -837,6 +917,8 @@
 
     .usage-title p {
         font-size: 12px;
+
+        line-height: 1.8;
     }
 
     .usage-list {
@@ -853,6 +935,7 @@
 
     .usage-item i {
         width: 38px;
+
         height: 38px;
 
         border-radius: 7px;
@@ -860,10 +943,14 @@
 
     .usage-item span {
         font-size: 11px;
+
+        line-height: 1.5;
     }
 
 
-    /* SPECIFICATION */
+    /* =========================
+       SPECIFICATION
+    ========================= */
 
     .detail-spec {
         padding: 70px 0;
@@ -875,13 +962,27 @@
 
     .detail-spec-heading p {
         font-size: 12px;
+
+        line-height: 1.8;
     }
 
     .spec-table {
+        width: 100%;
+
         border-radius: 8px;
     }
 
     .spec-row {
+
+        /*
+         * Desktop:
+         * label | value
+         *
+         * Mobile:
+         * label
+         * value
+         */
+
         grid-template-columns: 1fr;
 
         align-items: stretch;
@@ -891,12 +992,14 @@
 
     .spec-row span,
     .spec-row strong {
+
         display: block;
 
         padding: 8px 15px;
     }
 
     .spec-row span {
+
         padding-bottom: 2px;
 
         color: var(--green);
@@ -907,7 +1010,10 @@
     }
 
     .spec-row strong {
+
         padding-top: 2px;
+
+        color: var(--green-dark);
 
         font-size: 11px;
 
@@ -915,7 +1021,9 @@
     }
 
 
-    /* CTA */
+    /* =========================
+       CTA
+    ========================= */
 
     .detail-cta {
         padding: 75px 0;
@@ -932,20 +1040,26 @@
     }
 
     .detail-cta::before {
+
         width: 220px;
+
         height: 220px;
 
         top: -120px;
+
         right: -100px;
 
         border-width: 45px;
     }
 
     .detail-cta::after {
+
         width: 180px;
+
         height: 180px;
 
         bottom: -110px;
+
         left: -90px;
 
         border-width: 35px;
@@ -955,15 +1069,17 @@
 
 /* =========================================================
    SMALL MOBILE
-   <= 420px
+   MAX WIDTH 420px
 ========================================================= */
 
 @media (max-width: 420px) {
 
+    /* HERO */
+
     .detail-hero {
         min-height: 540px;
 
-        padding-top: 95px;
+        padding: 95px 0 55px;
     }
 
     .detail-hero h1 {
@@ -980,7 +1096,12 @@
 
     .detail-hero-content > p {
         font-size: 11px;
+
+        line-height: 1.8;
     }
+
+
+    /* ABOUT */
 
     .detail-about {
         padding: 60px 0;
@@ -990,7 +1111,11 @@
         gap: 38px;
     }
 
+
+    /* IMAGE */
+
     .detail-image {
+
         width: calc(100% - 7px);
 
         margin-left: 7px;
@@ -999,9 +1124,27 @@
     }
 
     .detail-image::before {
+
         width: calc(100% - 7px);
+
         height: calc(100% - 7px);
+
+        border-radius: 10px;
     }
+
+    .detail-image img {
+
+        width: 100%;
+
+        height: auto;
+
+        border-radius: 8px;
+
+        object-fit: contain;
+    }
+
+
+    /* TITLE */
 
     .detail-content h2,
     .usage-title h2,
@@ -1009,11 +1152,18 @@
     .detail-cta h2 {
 
         font-size: 28px;
+
+        line-height: 1.2;
     }
 
     .detail-content p {
         font-size: 11px;
+
+        line-height: 1.8;
     }
+
+
+    /* USAGE */
 
     .usage-item {
         min-height: 60px;
@@ -1024,7 +1174,9 @@
     }
 
     .usage-item i {
+
         width: 35px;
+
         height: 35px;
 
         font-size: 12px;
@@ -1034,6 +1186,9 @@
         font-size: 10px;
     }
 
+
+    /* SPEC */
+
     .spec-row span {
         font-size: 8px;
     }
@@ -1042,16 +1197,18 @@
         font-size: 10px;
     }
 
+
+    /* CTA */
+
     .detail-cta {
         padding: 65px 0;
     }
-
 }
 
 
 /* =========================================================
    EXTRA SMALL
-   <= 360px
+   MAX WIDTH 360px
 ========================================================= */
 
 @media (max-width: 360px) {
