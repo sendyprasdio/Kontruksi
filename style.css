@@ -1911,6 +1911,451 @@ ul {
         scale(1.04);
 }
 
+/* =========================================================
+   PROJECT DOCUMENTATION CAROUSEL
+========================================================= */
+
+.project-documentation {
+    width: 100%;
+    background: var(--white);
+}
+
+.documentation-main {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.main-video-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    border-radius: var(--radius-lg);
+}
+
+.main-project-video {
+    display: block;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    background: #000;
+}
+
+.main-video-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    padding: 25px 0;
+}
+
+.video-category {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: var(--green);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.main-video-info h3 {
+    margin-bottom: 7px;
+
+    color: var(--green-dark);
+
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.main-video-info p {
+    max-width: 700px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.video-location {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    color: var(--green-dark);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.video-location i {
+    color: var(--yellow-dark);
+}
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.documentation-carousel {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 15px;
+}
+
+
+/* TRACK WRAPPER */
+
+.video-track-wrapper {
+    width: 100%;
+
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+
+/* TRACK */
+
+.video-track {
+    display: flex;
+
+    gap: 18px;
+
+    width: max-content;
+
+    transition: transform 0.4s ease;
+
+    will-change: transform;
+}
+
+
+/* =========================================================
+   VIDEO THUMB
+========================================================= */
+
+.video-thumb {
+    position: relative;
+
+    flex: 0 0 220px;
+
+    width: 220px;
+
+    padding: 0;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.video-thumb:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--yellow);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.video-thumb.active {
+    border: 2px solid var(--yellow);
+
+    box-shadow:
+        0 8px 25px rgba(244, 197, 66, 0.2);
+}
+
+
+/* THUMB IMAGE */
+
+.thumb-image {
+    position: relative;
+
+    width: 100%;
+    height: 135px;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+.thumb-image video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    pointer-events: none;
+}
+
+
+/* PLAY */
+
+.thumb-play {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(18, 60, 42, 0.9);
+
+    color: var(--yellow);
+
+    border-radius: 50%;
+
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+
+/* NUMBER */
+
+.thumb-number {
+    position: absolute;
+
+    top: 10px;
+    left: 10px;
+
+    padding: 5px 8px;
+
+    background: var(--green-dark);
+
+    color: var(--yellow);
+
+    border-radius: 5px;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    pointer-events: none;
+}
+
+
+/* TITLE */
+
+.thumb-title {
+    display: block;
+
+    padding: 14px;
+
+    color: var(--green-dark);
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   LEFT / RIGHT BUTTON
+========================================================= */
+
+.video-nav {
+    width: 45px;
+    height: 45px;
+
+    flex: 0 0 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--green-dark);
+
+    color: var(--yellow);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    z-index: 5;
+}
+
+.video-nav:hover {
+    background: var(--green);
+
+    transform: scale(1.08);
+}
+
+.video-nav:disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   SWIPE HINT
+========================================================= */
+
+.video-swipe-hint {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+}
+
+.video-swipe-hint i {
+    color: var(--yellow-dark);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .main-project-video {
+        height: 480px;
+    }
+
+    .video-thumb {
+        flex-basis: 200px;
+        width: 200px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .main-project-video {
+        height: 380px;
+    }
+
+    .main-video-info {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .documentation-carousel {
+        gap: 8px;
+    }
+
+    .video-nav {
+        width: 38px;
+        height: 38px;
+
+        flex: 0 0 38px;
+    }
+
+    .video-thumb {
+        flex-basis: 180px;
+        width: 180px;
+    }
+
+    .thumb-image {
+        height: 115px;
+    }
+
+    .video-track-wrapper {
+        overflow-x: auto;
+
+        scrollbar-width: none;
+
+        -ms-overflow-style: none;
+
+        scroll-behavior: smooth;
+
+        touch-action: pan-x;
+    }
+
+    .video-track-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .video-track {
+        transform: none !important;
+    }
+
+    .video-swipe-hint {
+        display: flex;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .main-project-video {
+        height: 300px;
+    }
+
+    .video-thumb {
+        flex-basis: 165px;
+        width: 165px;
+    }
+
+    .thumb-image {
+        height: 105px;
+    }
+
+    .video-nav {
+        width: 34px;
+        height: 34px;
+
+        flex: 0 0 34px;
+
+        font-size: 11px;
+    }
+
+}
 
 /* =========================================================
    TABLET
