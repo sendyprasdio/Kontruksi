@@ -2382,208 +2382,10 @@ ul {
 
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE
+   NIKI SEKAWAN PONDASI
 ========================================================= */
 
-@media (max-width: 768px) {
-
-    /* CEGAH HALAMAN UTAMA MELEBAR */
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-
-    /* CONTAINER */
-    .project-documentation {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .project-documentation .container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 16px;
-        padding-right: 16px;
-
-        box-sizing: border-box;
-    }
-
-
-    /* =====================================================
-       MAIN VIDEO
-    ===================================================== */
-
-    .documentation-main {
-        width: 100%;
-        max-width: 100%;
-
-        overflow: hidden;
-    }
-
-    .main-video-wrapper {
-        width: 100%;
-        max-width: 100%;
-
-        overflow: hidden;
-
-        border-radius: 14px;
-    }
-
-    .main-project-video {
-        width: 100%;
-        max-width: 100%;
-
-        height: auto;
-
-        display: block;
-
-        object-fit: contain;
-    }
-
-
-    /* =====================================================
-       CAROUSEL
-    ===================================================== */
-
-    .documentation-carousel {
-        width: 100%;
-        max-width: 100%;
-
-        gap: 8px;
-
-        overflow: hidden;
-    }
-
-
-    .video-track-wrapper {
-        flex: 1 1 auto;
-
-        width: 0;
-        min-width: 0;
-        max-width: 100%;
-
-        overflow-x: auto;
-        overflow-y: hidden;
-
-        touch-action: pan-x;
-    }
-
-
-    .video-track {
-        display: flex;
-
-        width: max-content;
-        min-width: max-content;
-
-        gap: 12px;
-    }
-
-
-    /* =====================================================
-       THUMBNAIL MOBILE
-    ===================================================== */
-
-    .video-thumb {
-        flex: 0 0 170px;
-
-        width: 170px;
-        min-width: 170px;
-        max-width: 170px;
-    }
-
-
-    .thumb-image {
-        width: 170px;
-        height: 100px;
-
-        border-radius: 10px;
-    }
-
-
-    .thumb-title {
-        font-size: 13px;
-        margin-top: 8px;
-    }
-
-
-    /* =====================================================
-       BUTTON MOBILE
-    ===================================================== */
-
-    .video-nav {
-        flex: 0 0 36px;
-
-        width: 36px;
-        height: 36px;
-
-        min-width: 36px;
-
-        font-size: 13px;
-    }
-
-
-    /* =====================================================
-       SWIPE HINT
-    ===================================================== */
-
-    .video-swipe-hint {
-        width: 100%;
-        max-width: 100%;
-
-        text-align: center;
-
-        box-sizing: border-box;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE KECIL
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .project-documentation .container {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-
-    .video-thumb {
-        flex: 0 0 155px;
-
-        width: 155px;
-        min-width: 155px;
-        max-width: 155px;
-    }
-
-
-    .thumb-image {
-        width: 155px;
-        height: 92px;
-    }
-
-
-    .video-track {
-        gap: 10px;
-    }
-
-
-    .video-nav {
-        flex: 0 0 34px;
-
-        width: 34px;
-        height: 34px;
-
-        min-width: 34px;
-    }
-
-}
 
 /* =========================================================
    TABLET
@@ -2592,14 +2394,23 @@ ul {
 
 @media (max-width: 1000px) {
 
-    /* CONTAINER */
+    /* ================= CONTAINER ================= */
 
     .container {
-        width: calc(100% - 40px);
+        width: 100%;
+        max-width: 1200px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        box-sizing: border-box;
     }
 
 
-    /* NAV */
+    /* ================= NAV ================= */
 
     .nav-menu {
         gap: 20px;
@@ -2610,18 +2421,17 @@ ul {
     }
 
 
-    /* SECTION */
+    /* ================= SECTION ================= */
 
     .section {
         padding: 85px 0;
     }
 
 
-    /* ABOUT */
+    /* ================= ABOUT ================= */
 
     .about-grid {
         grid-template-columns: 1fr;
-
         gap: 50px;
     }
 
@@ -2637,7 +2447,7 @@ ul {
     }
 
 
-    /* SERVICES */
+    /* ================= SERVICES ================= */
 
     .service-grid {
         grid-template-columns:
@@ -2645,7 +2455,7 @@ ul {
     }
 
 
-    /* PROJECT SUMMARY */
+    /* ================= PROJECT SUMMARY ================= */
 
     .project-summary {
         grid-template-columns: 1fr;
@@ -2668,7 +2478,7 @@ ul {
     }
 
 
-    /* PROJECT STATS */
+    /* ================= PROJECT STATS ================= */
 
     .project-stats {
         grid-template-columns:
@@ -2676,11 +2486,10 @@ ul {
     }
 
 
-    /* WHY */
+    /* ================= WHY ================= */
 
     .why-grid {
         grid-template-columns: 1fr;
-
         gap: 50px;
     }
 
@@ -2701,7 +2510,7 @@ ul {
     }
 
 
-    /* VALUES */
+    /* ================= VALUES ================= */
 
     .values-grid {
         grid-template-columns:
@@ -2709,7 +2518,7 @@ ul {
     }
 
 
-    /* FOOTER */
+    /* ================= FOOTER ================= */
 
     .footer-grid {
         grid-template-columns:
@@ -2717,6 +2526,7 @@ ul {
 
         gap: 40px;
     }
+
 }
 
 
@@ -2727,509 +2537,84 @@ ul {
 
 @media (max-width: 768px) {
 
-    /* CONTAINER */
+    /* =====================================================
+       GLOBAL MOBILE
+    ===================================================== */
 
-    .container {
-        width: calc(100% - 30px);
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        overflow-x: hidden;
     }
 
 
-    /* NAVBAR */
+    /* =====================================================
+       SECTION FULL WIDTH
+    ===================================================== */
+
+    section,
+    footer,
+    header {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       CONTAINER
+    ===================================================== */
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        padding-left: 15px;
+        padding-right: 15px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
 
     .navbar {
-        height: 72px;
-    }
-
-    .nav-container {
-        gap: 15px;
-    }
-
-    .logo {
-        font-size: 11px;
-
-        gap: 8px;
-    }
-
-    .logo-icon {
-        width: 39px;
-        height: 39px;
-    }
-
-    .logo-icon i {
-        font-size: 16px;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-
-    /* MOBILE MENU */
-
-    .nav-menu {
-        position: absolute;
-
-        top: 72px;
-
-        left: 15px;
-        right: 15px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 0;
-
-        padding: 10px;
-
-        background: var(--white);
-
-        border:
-            1px solid
-            var(--border);
-
-        border-radius: 12px;
-
-        box-shadow: var(--shadow);
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        transform: translateY(-10px);
-
-        transition: var(--transition);
-    }
-
-    .navbar.active .nav-menu {
-        opacity: 1;
-
-        visibility: visible;
-
-        transform: translateY(0);
-    }
-
-    .nav-menu a {
-        padding: 13px 15px;
-
-        border-radius: 6px;
-    }
-
-    .nav-menu a:hover,
-    .nav-menu a.active {
-        background: var(--bg);
-    }
-
-    .nav-menu a::after {
-        display: none;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        min-height: 700px;
-    }
-
-    .hero-container {
-        padding-top: 80px;
-    }
-
-    .hero h1 {
-        font-size:
-            clamp(
-                36px,
-                10vw,
-                52px
-            );
-
-        letter-spacing: -1px;
-    }
-
-    .hero p {
-        font-size: 12px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-    }
-
-    .hero-stats {
-        gap: 20px;
-
-        justify-content: space-between;
-    }
-
-    .hero-stats strong {
-        font-size: 22px;
-    }
-
-    .hero-stats span {
-        font-size: 8px;
-    }
-
-
-    /* SECTION */
-
-    .section {
-        padding: 70px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-        font-size: 30px;
-    }
-
-
-    /* ABOUT */
-
-    .about-grid {
-        gap: 40px;
-    }
-
-    .about-image > img {
-        height: 390px;
-    }
-
-    .experience-box {
-        right: 15px;
-        bottom: 20px;
-
-        width: 115px;
-        height: 115px;
-    }
-
-    .experience-box strong {
-        font-size: 25px;
-    }
-
-    .experience-box span {
-        font-size: 9px;
-    }
-
-    .about-points {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* SERVICES */
-
-    .service-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-image {
-        height: 220px;
-    }
-
-
-    /* PROJECT */
-
-    .project-heading {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 15px;
-    }
-
-    .project-summary {
-        margin-bottom: 45px;
-    }
-
-    .summary-item {
-        min-height: 115px;
-    }
-
-    .project-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .project-table-wrapper {
-        overflow-x: auto;
-
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .project-table {
-        min-width: 650px;
-    }
-
-    .project-table-title {
-        min-width: 650px;
-    }
-
-    .ongoing-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* WHY */
-
-    .why-grid {
-        gap: 40px;
-    }
-
-    .why-content h2 {
-        font-size: 32px;
-    }
-
-    .why-image > img {
-        height: 390px;
-    }
-
-    .quote-box {
-        left: 15px;
-        bottom: 15px;
-
-        max-width: 250px;
-
-        padding: 20px;
-    }
-
-
-    /* VALUES */
-
-    .core-values {
-        margin-top: 70px;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-
-    /* CTA */
-
-    .cta {
-        padding: 75px 0;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-    .cta-buttons .btn {
-        width: 100%;
-    }
-
-
-    /* FOOTER */
-
-    .footer {
-        padding-top: 60px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-
-        padding-bottom: 40px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-
-        justify-content: center;
-
-        gap: 5px;
-
-        padding: 20px 0;
-
-        text-align: center;
-    }
-
-
-    /* WHATSAPP */
-
-    .whatsapp {
-        width: 50px;
-        height: 50px;
-
-        right: 18px;
-        bottom: 18px;
-
-        font-size: 23px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   MAX WIDTH 420PX
-========================================================= */
-
-@media (max-width: 420px) {
-
-    /* CONTAINER */
-
-    .container {
-        width: calc(100% - 24px);
-    }
-
-
-    /* HERO */
-
-    .hero {
-        min-height: 680px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .hero-stats {
-        gap: 12px;
-    }
-
-    .hero-stats strong {
-        font-size: 19px;
-    }
-
-    .hero-stats span {
-        font-size: 7px;
-    }
-
-
-    /* ABOUT + WHY IMAGE */
-
-    .about-image > img,
-    .why-image > img {
-        height: 330px;
-    }
-
-
-    /* EXPERIENCE */
-
-    .experience-box {
-        width: 100px;
-        height: 100px;
-    }
-
-    .experience-box strong {
-        font-size: 22px;
-    }
-
-    .experience-box span {
-        font-size: 8px;
-    }
-
-
-    /* PROJECT */
-
-    .project-table-title {
-        padding: 18px;
-    }
-
-    .ongoing-card {
-        padding: 17px;
-    }
-
-
-    /* WHY */
-
-    .advantage {
-        gap: 12px;
-    }
-
-    .advantage-icon {
-        width: 42px;
-        height: 42px;
-    }
-
-    .why-content h2 {
-        font-size: 28px;
-    }
-
-    .why-image {
-        width: 100%;
-    }
-
-    .quote-box {
         position: relative;
-
-        left: auto;
-        bottom: auto;
 
         width: 100%;
         max-width: 100%;
 
-        margin-top: -20px;
-
-        padding: 18px;
-
-        border-radius: var(--radius);
-    }
-
-
-    /* CTA */
-
-    .cta h2 {
-        font-size: 27px;
-    }
-
-
-    /* WHATSAPP */
-
-    .whatsapp {
-        width: 48px;
-        height: 48px;
-
-        right: 15px;
-        bottom: 15px;
-    }
-}
-
-/* =========================================================
-   FIX MOBILE NAVBAR
-========================================================= */
-
-.menu-toggle {
-    display: none;
-}
-
-
-@media (max-width: 768px) {
-
-    /* NAVBAR */
-
-    .navbar {
-        position: relative;
-        z-index: 9999;
-
         height: 72px;
+
+        z-index: 9999;
     }
 
-
-    /* CONTAINER */
 
     .nav-container {
         position: relative;
 
+        width: 100%;
         height: 72px;
 
         display: flex;
         align-items: center;
+
+        gap: 15px;
     }
 
 
-    /* LOGO */
+    /* ================= LOGO ================= */
 
     .logo {
         display: flex;
@@ -3291,7 +2676,6 @@ ul {
 
     .menu-toggle i {
         display: block;
-
         font-size: 22px;
     }
 
@@ -3308,9 +2692,13 @@ ul {
         left: 15px;
         right: 15px;
 
+        width: auto;
+
         display: flex !important;
 
         flex-direction: column;
+
+        align-items: stretch;
 
         gap: 0;
 
@@ -3318,11 +2706,15 @@ ul {
 
         background: #ffffff;
 
-        border: 1px solid #dddddd;
+        border:
+            1px solid
+            #dddddd;
 
         border-radius: 12px;
 
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        box-shadow:
+            0 10px 30px
+            rgba(0, 0, 0, 0.15);
 
         opacity: 0;
 
@@ -3330,17 +2722,17 @@ ul {
 
         pointer-events: none;
 
-        transform: translateY(-10px);
+        transform:
+            translateY(-10px);
 
-        transition: all 0.25s ease;
+        transition:
+            all 0.25s ease;
 
         z-index: 9999;
     }
 
 
-    /* =====================================================
-       MENU AKTIF
-    ===================================================== */
+    /* ================= MENU ACTIVE ================= */
 
     .navbar.active .nav-menu {
         opacity: 1;
@@ -3349,13 +2741,12 @@ ul {
 
         pointer-events: auto;
 
-        transform: translateY(0);
+        transform:
+            translateY(0);
     }
 
 
-    /* =====================================================
-       LINK
-    ===================================================== */
+    /* ================= LINK ================= */
 
     .nav-menu a {
         display: block;
@@ -3382,25 +2773,692 @@ ul {
     }
 
 
-    /* HILANGKAN GARIS NAV DESKTOP */
-
     .nav-menu a::after {
         display: none !important;
     }
 
 
-    /* HILANGKAN BUTTON KONSULTASI */
-
     .nav-button {
         display: none !important;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+
+        min-height: 700px;
+
+        overflow: hidden;
+    }
+
+
+    .hero-container {
+        padding-top: 80px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(
+                36px,
+                10vw,
+                52px
+            );
+
+        letter-spacing: -1px;
+    }
+
+
+    .hero p {
+        font-size: 12px;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    .hero-stats {
+        gap: 20px;
+
+        justify-content:
+            space-between;
+    }
+
+
+    .hero-stats strong {
+        font-size: 22px;
+    }
+
+
+    .hero-stats span {
+        font-size: 8px;
+    }
+
+
+    /* =====================================================
+       SECTION
+    ===================================================== */
+
+    .section {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 70px 0;
+
+        overflow: hidden;
+    }
+
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+
+    .about-grid {
+        gap: 40px;
+    }
+
+
+    .about-image > img {
+        height: 390px;
+    }
+
+
+    .experience-box {
+        right: 15px;
+        bottom: 20px;
+
+        width: 115px;
+        height: 115px;
+    }
+
+
+    .experience-box strong {
+        font-size: 25px;
+    }
+
+
+    .experience-box span {
+        font-size: 9px;
+    }
+
+
+    .about-points {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       SERVICES
+    ===================================================== */
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .service-image {
+        height: 220px;
+    }
+
+
+    /* =====================================================
+       PROJECT
+    ===================================================== */
+
+    .project-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .project-summary {
+        margin-bottom: 45px;
+    }
+
+
+    .summary-item {
+        min-height: 115px;
+    }
+
+
+    .project-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-table-wrapper {
+        width: 100%;
+        max-width: 100%;
+
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling:
+            touch;
+    }
+
+
+    .project-table {
+        min-width: 650px;
+    }
+
+
+    .project-table-title {
+        min-width: 650px;
+    }
+
+
+    .ongoing-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       DOCUMENTATION
+    ===================================================== */
+
+    .project-documentation {
+        width: 100%;
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+
+    .project-documentation .container {
+        width: 100%;
+        max-width: 1200px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    /* ================= MAIN VIDEO ================= */
+
+    .documentation-main {
+        width: 100%;
+        max-width: 100%;
+
+        overflow: hidden;
+    }
+
+
+    .main-video-wrapper {
+        width: 100%;
+        max-width: 100%;
+
+        overflow: hidden;
+
+        border-radius: 14px;
+    }
+
+
+    .main-project-video {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+    }
+
+
+    /* ================= CAROUSEL ================= */
+
+    .documentation-carousel {
+        display: flex;
+
+        width: 100%;
+        max-width: 100%;
+
+        gap: 8px;
+
+        overflow: hidden;
+    }
+
+
+    .video-track-wrapper {
+        flex: 1 1 auto;
+
+        width: 0;
+        min-width: 0;
+        max-width: 100%;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling:
+            touch;
+
+        touch-action: pan-x;
+
+        scrollbar-width: none;
+    }
+
+
+    .video-track-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .video-track {
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        width: max-content;
+        min-width: max-content;
+
+        gap: 12px;
+    }
+
+
+    /* ================= THUMBNAIL ================= */
+
+    .video-thumb {
+        flex:
+            0 0 170px;
+
+        width: 170px;
+        min-width: 170px;
+        max-width: 170px;
+
+        box-sizing: border-box;
+    }
+
+
+    .thumb-image {
+        width: 170px;
+        height: 100px;
+
+        overflow: hidden;
+
+        border-radius: 10px;
+    }
+
+
+    .thumb-image video {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    .thumb-title {
+        display: block;
+
+        font-size: 13px;
+
+        margin-top: 8px;
+    }
+
+
+    /* ================= BUTTON ================= */
+
+    .video-nav {
+        flex:
+            0 0 36px;
+
+        width: 36px;
+        height: 36px;
+
+        min-width: 36px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* ================= SWIPE HINT ================= */
+
+    .video-swipe-hint {
+        width: 100%;
+        max-width: 100%;
+
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       WHY
+    ===================================================== */
+
+    .why-grid {
+        gap: 40px;
+    }
+
+
+    .why-content h2 {
+        font-size: 32px;
+    }
+
+
+    .why-image > img {
+        height: 390px;
+    }
+
+
+    .quote-box {
+        left: 15px;
+        bottom: 15px;
+
+        max-width: 250px;
+
+        padding: 20px;
+    }
+
+
+    /* =====================================================
+       VALUES
+    ===================================================== */
+
+    .core-values {
+        margin-top: 70px;
+    }
+
+
+    .values-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    /* =====================================================
+       CTA
+    ===================================================== */
+
+    .cta {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 75px 0;
+    }
+
+
+    .cta-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+        width: 100%;
+        max-width: 100%;
+
+        padding-top: 60px;
+
+        overflow: hidden;
+    }
+
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 40px;
+    }
+
+
+    .footer-bottom {
+        width: 100%;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        padding: 20px 0;
+
+        text-align: center;
+    }
+
+
+    /* =====================================================
+       WHATSAPP
+    ===================================================== */
+
+    .whatsapp {
+        width: 50px;
+        height: 50px;
+
+        right: 18px;
+        bottom: 18px;
+
+        font-size: 23px;
     }
 
 }
 
 
 /* =========================================================
-   EXTRA SAFETY
-   MENCEGAH ELEMEN GRID/FLEX MEMBUAT OVERFLOW
+   SMALL MOBILE
+   MAX WIDTH 420PX
+========================================================= */
+
+@media (max-width: 420px) {
+
+    /* ================= CONTAINER ================= */
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+        min-height: 680px;
+    }
+
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+
+    .hero-stats {
+        gap: 12px;
+    }
+
+
+    .hero-stats strong {
+        font-size: 19px;
+    }
+
+
+    .hero-stats span {
+        font-size: 7px;
+    }
+
+
+    /* ================= ABOUT + WHY ================= */
+
+    .about-image > img,
+    .why-image > img {
+        height: 330px;
+    }
+
+
+    /* ================= EXPERIENCE ================= */
+
+    .experience-box {
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .experience-box strong {
+        font-size: 22px;
+    }
+
+
+    .experience-box span {
+        font-size: 8px;
+    }
+
+
+    /* ================= PROJECT ================= */
+
+    .project-table-title {
+        padding: 18px;
+    }
+
+
+    .ongoing-card {
+        padding: 17px;
+    }
+
+
+    /* ================= WHY ================= */
+
+    .advantage {
+        gap: 12px;
+    }
+
+
+    .advantage-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .why-content h2 {
+        font-size: 28px;
+    }
+
+
+    .why-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    .quote-box {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin-top: -20px;
+
+        padding: 18px;
+
+        border-radius: var(--radius);
+    }
+
+
+    /* ================= VIDEO ================= */
+
+    .video-thumb {
+        flex:
+            0 0 155px;
+
+        width: 155px;
+        min-width: 155px;
+        max-width: 155px;
+    }
+
+
+    .thumb-image {
+        width: 155px;
+        height: 92px;
+    }
+
+
+    .video-track {
+        gap: 10px;
+    }
+
+
+    .video-nav {
+        flex:
+            0 0 34px;
+
+        width: 34px;
+        height: 34px;
+
+        min-width: 34px;
+    }
+
+
+    /* ================= CTA ================= */
+
+    .cta h2 {
+        font-size: 27px;
+    }
+
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp {
+        width: 48px;
+        height: 48px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   GRID SAFETY
 ========================================================= */
 
 .about-grid,
@@ -3412,6 +3470,7 @@ ul {
 .footer-grid {
     min-width: 0;
 }
+
 
 .about-grid > *,
 .service-grid > *,
@@ -3425,5 +3484,22 @@ ul {
 
 
 /* =========================================================
-   END CSS
+   FULL WIDTH SAFETY
+========================================================= */
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+
+img,
+video {
+    height: auto;
+}
+
+
+/* =========================================================
+   END RESPONSIVE
 ========================================================= */
