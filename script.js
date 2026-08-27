@@ -1,6 +1,7 @@
 /* =========================================================
    NIKI SEKAWAN PONDASI
    MAIN JAVASCRIPT
+   FIXED VERSION
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -141,6 +142,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
+        /*
+           Jika berada paling atas,
+           paksa Home menjadi active
+        */
+
+        if (window.scrollY <= 100) {
+
+            const homeSection =
+                document.getElementById("home");
+
+            if (homeSection) {
+
+                current = "home";
+
+            }
+
+        }
+
+
         navLinks.forEach(function (link) {
 
             link.classList.remove("active");
@@ -207,25 +227,83 @@ document.addEventListener("DOMContentLoaded", function () {
             const href =
                 this.getAttribute("href");
 
+
+            /*
+               Abaikan link biasa / external
+            */
+
             if (
                 !href ||
                 !href.startsWith("#") ||
                 href === "#"
             ) {
+
                 return;
+
             }
+
+
+            /*
+               HOME
+               Selalu kembali ke posisi paling atas
+            */
+
+            if (href === "#home") {
+
+                e.preventDefault();
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+                /*
+                   Hapus hash dari URL
+                   supaya tidak menyimpan posisi section
+                */
+
+                if (
+                    history.replaceState &&
+                    window.location.hash
+                ) {
+
+                    history.replaceState(
+                        null,
+                        "",
+                        window.location.pathname +
+                        window.location.search
+                    );
+
+                }
+
+                return;
+
+            }
+
+
+            /*
+               CARI TARGET SECTION
+            */
 
             const target =
                 document.querySelector(href);
 
             if (!target) {
+
                 return;
+
             }
+
 
             e.preventDefault();
 
+
             const navbarHeight =
                 navbar ? navbar.offsetHeight : 0;
+
 
             const targetPosition =
                 target.getBoundingClientRect().top +
@@ -240,6 +318,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 behavior: "smooth"
 
             });
+
+
+            /*
+               Update URL hash tanpa membuat
+               browser melakukan jump otomatis
+            */
+
+            if (
+                history.replaceState
+            ) {
+
+                history.replaceState(
+                    null,
+                    "",
+                    href
+                );
+
+            }
 
         });
 
@@ -291,12 +387,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainLocation =
         document.getElementById("mainVideoLocation");
 
+
     /*
-       HTML kamu menggunakan:
+       HTML menggunakan:
 
        <span class="video-category">
-
-       bukan id="mainVideoCategory"
     */
 
     const mainCategory =
@@ -348,9 +443,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        GANTI VIDEO UTAMA
+       
+       shouldScroll:
+       true  = thumbnail ikut digeser
+       false = jangan mengganggu posisi halaman
     ===================================================== */
 
-    function changeVideo(index, autoplay = true) {
+    function changeVideo(
+        index,
+        autoplay = true,
+        shouldScroll = false
+    ) {
 
         if (
             index < 0 ||
@@ -366,9 +469,9 @@ document.addEventListener("DOMContentLoaded", function () {
             videoThumbs[index];
 
 
-        /* ================================================
+        /* =================================================
            AMBIL DATA VIDEO
-        ================================================ */
+        ================================================= */
 
         const videoSource =
             thumb.dataset.video;
@@ -392,40 +495,40 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-        /* ================================================
+        /* =================================================
            STOP VIDEO LAMA
-        ================================================ */
+        ================================================= */
 
         mainVideo.pause();
 
 
-        /* ================================================
+        /* =================================================
            RESET VIDEO
-        ================================================ */
+        ================================================= */
 
         mainVideo.removeAttribute("src");
 
         mainVideo.load();
 
 
-        /* ================================================
+        /* =================================================
            PASANG VIDEO BARU
-        ================================================ */
+        ================================================= */
 
         mainVideo.src =
             videoSource;
 
 
         /*
-           WAJIB LOAD SETELAH SRC DIGANTI
+           Load setelah src diganti
         */
 
         mainVideo.load();
 
 
-        /* ================================================
+        /* =================================================
            UPDATE INFORMASI
-        ================================================ */
+        ================================================= */
 
         if (mainTitle) {
 
@@ -459,9 +562,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        /* ================================================
+        /* =================================================
            UPDATE ACTIVE THUMBNAIL
-        ================================================ */
+        ================================================= */
 
         videoThumbs.forEach(
             function (item) {
@@ -477,32 +580,41 @@ document.addEventListener("DOMContentLoaded", function () {
         thumb.classList.add("active");
 
 
-        /* ================================================
+        /* =================================================
            SIMPAN INDEX
-        ================================================ */
+        ================================================= */
 
         currentVideoIndex =
             index;
 
 
-        /* ================================================
+        /* =================================================
            SCROLL THUMBNAIL
-        ================================================ */
+           
+           HANYA dilakukan ketika user
+           benar-benar memilih video.
+           
+           Tidak dilakukan saat website pertama dibuka.
+        ================================================= */
 
-        thumb.scrollIntoView({
+        if (shouldScroll) {
 
-            behavior: "smooth",
+            thumb.scrollIntoView({
 
-            block: "nearest",
+                behavior: "smooth",
 
-            inline: "center"
+                block: "nearest",
 
-        });
+                inline: "center"
+
+            });
+
+        }
 
 
-        /* ================================================
+        /* =================================================
            PUTAR VIDEO
-        ================================================ */
+        ================================================= */
 
         if (autoplay) {
 
@@ -552,8 +664,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     e.preventDefault();
 
+                    /*
+                       User klik video:
+                       boleh scroll thumbnail
+                    */
+
                     changeVideo(
                         index,
+                        true,
                         true
                     );
 
@@ -612,7 +730,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /*
-           Kalau belum bisa geser ke kiri
+           Tombol kiri
         */
 
         if (prevButton) {
@@ -624,7 +742,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         /*
-           Kalau sudah mentok kanan
+           Tombol kanan
         */
 
         if (nextButton) {
@@ -753,8 +871,11 @@ document.addEventListener("DOMContentLoaded", function () {
         function (e) {
 
             if (!isDragging) {
+
                 return;
+
             }
+
 
             e.preventDefault();
 
@@ -851,10 +972,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        VIDEO PERTAMA
+       
+       PENTING:
+       shouldScroll = FALSE
+       
+       Jadi browser TIDAK akan lompat
+       ke section Video Proyek.
     ===================================================== */
 
     changeVideo(
         0,
+        false,
         false
     );
 
@@ -875,7 +1003,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        VIDEO ERROR HANDLER
-       UNTUK DEBUG
     ===================================================== */
 
     mainVideo.addEventListener(
