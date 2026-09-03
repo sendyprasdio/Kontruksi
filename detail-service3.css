@@ -1,185 +1,174 @@
 /* =========================================================
+   DETAIL SERVICE 3
+   NIKI SEKAWAN PONDASI
+   SEDOT LUMPUR BORE PILE
+   ========================================================= */
+
+
+/* =========================================================
    DETAIL HERO
-========================================================= */
+   ========================================================= */
 
 .detail-hero {
     position: relative;
-
-    min-height: 520px;
+    min-height: 480px;
 
     display: flex;
     align-items: center;
 
-    padding: 100px 0 70px;
-
     background:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.96),
-            rgba(2, 2, 2, 0.72)
+            rgba(0, 0, 0, 0.911),
+            rgba(0, 0, 0, 0.466),
+            rgba(0, 0, 0, 0.397)
         ),
-        url("Gambarsedotlumpur.jpg") center center / cover no-repeat;
-
-    color: var(--white);
+        url("Gambarsedotlumpur.jpg") center/cover no-repeat;
 
     overflow: hidden;
 }
 
+
 .detail-hero-overlay {
     position: absolute;
-
     inset: 0;
 
     background:
         linear-gradient(
-            135deg,
-            rgba(244, 197, 66, 0.08),
-            transparent 60%
+            90deg,
+            rgba(0, 0, 0, 0.507),
+            rgba(0, 0, 0, 0),
+            transparent
         );
-
-    pointer-events: none;
 }
+
 
 .detail-hero-content {
     position: relative;
-
     z-index: 2;
 
-    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 70px;
 }
 
-.detail-hero-content > span {
-    display: inline-block;
-
-    margin-bottom: 15px;
-
-    color: var(--yellow);
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-}
 
 .detail-hero h1 {
     max-width: 800px;
 
-    margin: 0 0 20px;
+    margin: 0;
 
     color: var(--white);
 
-    font-size: clamp(40px, 6vw, 65px);
-
+    font-size: clamp(38px, 5vw, 68px);
     line-height: 1.05;
+
+    font-weight: 800;
 
     letter-spacing: -2px;
 }
 
-.detail-hero h1 strong {
-    display: block;
 
+.detail-hero h1 strong {
     color: var(--yellow);
 }
 
-.detail-hero-content > p {
-    max-width: 650px;
 
-    margin: 0 0 25px;
+.detail-hero p {
+    max-width: 700px;
 
-    color: rgba(255, 255, 255, 0.75);
+    margin: 25px 0 0;
 
-    font-size: 14px;
+    color: rgba(255, 255, 255, .85);
 
+    font-size: 17px;
     line-height: 1.8;
 }
 
 
 /* =========================================================
    BREADCRUMB
-========================================================= */
+   ========================================================= */
 
 .detail-breadcrumb {
     display: flex;
-
     align-items: center;
-
     flex-wrap: wrap;
 
     gap: 10px;
 
-    margin-top: 20px;
+    margin-top: 30px;
 
-    font-size: 10px;
+    color: rgba(255, 255, 255, .65);
+
+    font-size: 14px;
 }
 
+
 .detail-breadcrumb a {
-    color: rgba(255, 255, 255, 0.65);
+    color: var(--white);
+
+    text-decoration: none;
 
     transition: var(--transition);
 }
+
 
 .detail-breadcrumb a:hover {
     color: var(--yellow);
 }
 
+
 .detail-breadcrumb i {
     color: var(--yellow);
 
-    font-size: 8px;
+    font-size: 11px;
 }
 
-.detail-breadcrumb span {
-    color: var(--white);
 
-    font-weight: 600;
+.detail-breadcrumb span {
+    color: rgba(255, 255, 255, .6);
 }
 
 
 /* =========================================================
    DETAIL ABOUT
-========================================================= */
+   ========================================================= */
 
 .detail-about {
-    padding: 110px 0;
+    padding: 100px 0;
 
     background: var(--white);
-
-    overflow: hidden;
 }
+
 
 .detail-about-grid {
     display: grid;
 
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
-
-    gap: 70px;
+    grid-template-columns: .9fr 1.1fr;
 
     align-items: center;
+
+    gap: 80px;
 }
 
 
 /* =========================================================
-   DETAIL IMAGE WRAPPER
-========================================================= */
+   DETAIL IMAGE
+   ========================================================= */
 
 .detail-image {
     position: relative;
 
-    width: 90%;
+    width: 78%;
+    max-width: 500px;
+
+    margin: 0 auto;
 
     padding: 15px;
 
     isolation: isolate;
 }
 
-
-/* =========================================================
-   YELLOW BORDER DECORATION
-========================================================= */
 
 .detail-image::before {
     content: "";
@@ -201,471 +190,794 @@
 
 
 /* =========================================================
-   DETAIL IMAGE
-   - TIDAK CROP
-   - TIDAK GEPENG
-   - MENGIKUTI RASIO ASLI
-========================================================= */
+   GALLERY
+   ========================================================= */
 
-.detail-image img {
+.detail-gallery {
     position: relative;
 
-    z-index: 1;
+    width: 100%;
+}
 
-    display: block;
+
+/* =========================================================
+   MAIN MEDIA
+   ========================================================= */
+
+.gallery-main {
+    position: relative;
 
     width: 100%;
 
-    height: auto;
+    aspect-ratio: 4 / 3;
 
-    max-width: 100%;
+    overflow: hidden;
 
     border-radius: var(--radius-lg);
 
-    box-shadow: var(--shadow);
+    /*
+       BACKGROUND NETRAL
+       supaya foto portrait / landscape
+       tetap terlihat utuh
+    */
 
-    background: var(--white);
+    background: #f3f3f3;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   FOTO UTAMA
+   ========================================================= */
+
+.gallery-main img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    /*
+       PENTING:
+       contain = foto tidak dipotong
+       dan tidak dipaksa ngezoom
+    */
 
     object-fit: contain;
+
+    object-position: center;
+
+    border-radius: var(--radius-lg);
+
+    background: #f3f3f3;
+
+    cursor: zoom-in;
 }
 
 
 /* =========================================================
-   DETAIL CONTENT
-========================================================= */
+   VIDEO UTAMA
+   ========================================================= */
 
-.detail-content {
-    position: relative;
+.gallery-main video {
+    display: block;
 
-    z-index: 2;
+    width: 100%;
+    height: 100%;
 
-    min-width: 0;
-}
+    /*
+       Video juga tidak dipotong
+    */
 
-.detail-label {
-    display: inline-block;
+    object-fit: contain;
 
-    margin-bottom: 12px;
+    object-position: center;
 
-    color: var(--green);
+    border-radius: var(--radius-lg);
 
-    font-size: 10px;
+    background: #111;
 
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
+    cursor: default;
 }
 
 
 /* =========================================================
-   DETAIL TITLE
-========================================================= */
+   ZOOM BUTTON
+   ========================================================= */
 
-.detail-content h2,
-.usage-title h2,
-.detail-spec-heading h2,
-.detail-cta h2 {
+.gallery-zoom {
+    position: absolute;
 
-    margin: 0 0 22px;
+    right: 15px;
+    bottom: 15px;
 
-    color: var(--green-dark);
+    width: 42px;
+    height: 42px;
 
-    font-size: clamp(30px, 4vw, 43px);
-
-    line-height: 1.15;
-
-    letter-spacing: -1px;
-}
-
-.detail-content h2 strong,
-.usage-title h2 strong,
-.detail-spec-heading h2 strong,
-.detail-cta h2 strong {
-    color: var(--green);
-}
-
-
-/* =========================================================
-   DETAIL TEXT
-========================================================= */
-
-.detail-content p {
-    margin: 0 0 17px;
-
-    color: var(--text-light);
-
-    font-size: 13px;
-
-    line-height: 1.9;
-}
-
-
-/* =========================================================
-   DETAIL BUTTON
-========================================================= */
-
-.detail-button {
-    display: inline-flex;
+    display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    gap: 10px;
+    border: none;
 
-    min-height: 50px;
+    border-radius: 50%;
 
-    margin-top: 10px;
-
-    padding: 0 22px;
-
-    background: var(--green-dark);
+    background: rgba(18, 60, 42, .9);
 
     color: var(--white);
 
-    border: 0;
+    font-size: 15px;
 
-    border-radius: 7px;
+    cursor: pointer;
 
-    font-size: 11px;
+    transition: var(--transition);
 
-    font-weight: 700;
+    z-index: 5;
+}
 
-    text-decoration: none;
+
+.gallery-zoom:hover {
+    background: var(--yellow);
+
+    color: var(--green-dark);
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   THUMBNAILS
+   ========================================================= */
+
+.gallery-thumbnails {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 14px;
+
+    padding: 3px 2px 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: thin;
+}
+
+
+.gallery-thumbnails::-webkit-scrollbar {
+    height: 5px;
+}
+
+
+.gallery-thumbnails::-webkit-scrollbar-track {
+    background: #eeeeee;
+
+    border-radius: 20px;
+}
+
+
+.gallery-thumbnails::-webkit-scrollbar-thumb {
+    background: var(--green);
+
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+   THUMBNAIL BUTTON
+   ========================================================= */
+
+.thumbnail {
+    position: relative;
+
+    flex: 0 0 78px;
+
+    width: 78px;
+    height: 60px;
+
+    padding: 0;
+
+    border: 2px solid transparent;
+
+    border-radius: var(--radius-sm);
+
+    overflow: hidden;
+
+    background: #eeeeee;
 
     cursor: pointer;
 
     transition: var(--transition);
 }
 
+
+.thumbnail:hover {
+    transform: translateY(-2px);
+}
+
+
+.thumbnail.active {
+    border-color: var(--yellow);
+
+    box-shadow:
+        0 0 0 2px rgba(244, 197, 66, .15);
+}
+
+
+/* =========================================================
+   THUMBNAIL MEDIA
+   ========================================================= */
+
+.thumbnail img,
+.thumbnail video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    /*
+       Thumbnail boleh crop
+       karena hanya preview kecil
+    */
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================================================
+   VIDEO ICON
+   ========================================================= */
+
+.video-icon {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(18, 60, 42, .9);
+
+    color: var(--white);
+
+    font-size: 11px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
+.image-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, .94);
+
+    z-index: 99999;
+}
+
+
+.image-lightbox.active {
+    display: flex;
+}
+
+
+/* =========================================================
+   FOTO LIGHTBOX
+   ========================================================= */
+
+.image-lightbox img {
+    display: block;
+
+    /*
+       FOTO TIDAK AKAN DIPAKSA MEMENUHI LAYAR
+    */
+
+    width: auto;
+    height: auto;
+
+    max-width: 95vw;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, .55);
+
+    cursor: zoom-out;
+}
+
+
+/* =========================================================
+   LIGHTBOX CLOSE
+   ========================================================= */
+
+.lightbox-close {
+    position: fixed;
+
+    top: 20px;
+    right: 25px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .12);
+
+    color: var(--white);
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 100000;
+
+    transition: .25s ease;
+}
+
+
+.lightbox-close:hover {
+    background: var(--yellow);
+
+    color: var(--green-dark);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   BODY SAAT LIGHTBOX AKTIF
+   ========================================================= */
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DETAIL CONTENT
+   ========================================================= */
+
+.detail-content {
+    max-width: 700px;
+}
+
+
+.detail-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--green);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.detail-content h2 {
+    margin: 0 0 25px;
+
+    color: var(--green-dark);
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+}
+
+
+.detail-content h2 strong {
+    color: var(--yellow);
+}
+
+
+.detail-content p {
+    margin: 0 0 18px;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    line-height: 1.85;
+}
+
+
+.detail-content p strong {
+    color: var(--green-dark);
+}
+
+
+/* =========================================================
+   DETAIL BUTTON
+   ========================================================= */
+
+.detail-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 15px;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    background: var(--green-dark);
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+
+.detail-button i {
+    transition: var(--transition);
+}
+
+
 .detail-button:hover {
     background: var(--yellow);
 
     color: var(--green-dark);
 
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+}
+
+
+.detail-button:hover i {
+    transform: translateX(4px);
 }
 
 
 /* =========================================================
-   USAGE / ADVANTAGE
-========================================================= */
+   DETAIL USAGE
+   ========================================================= */
 
 .detail-usage {
     padding: 90px 0;
 
     background: var(--bg);
-
-    overflow: hidden;
 }
+
 
 .detail-usage-grid {
     display: grid;
 
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
+    grid-template-columns: 1fr 1fr;
 
-    gap: 80px;
+    gap: 70px;
 
     align-items: center;
 }
 
-.usage-title {
-    min-width: 0;
+
+.usage-title h2 {
+    margin: 0 0 20px;
+
+    color: var(--green-dark);
+
+    font-size: clamp(30px, 4vw, 46px);
+
+    line-height: 1.1;
 }
 
+
+.usage-title h2 strong {
+    color: var(--yellow);
+}
+
+
 .usage-title p {
-    max-width: 530px;
+    max-width: 600px;
 
     margin: 0;
 
-    color: var(--text-light);
+    color: var(--text);
 
-    font-size: 13px;
-
-    line-height: 1.9;
+    line-height: 1.8;
 }
 
 
 /* =========================================================
    USAGE LIST
-========================================================= */
+   ========================================================= */
 
 .usage-list {
     display: flex;
 
     flex-direction: column;
 
-    gap: 13px;
-
-    width: 100%;
+    gap: 15px;
 }
 
-.usage-item {
-    min-height: 72px;
 
+.usage-item {
     display: flex;
 
     align-items: center;
 
-    gap: 17px;
+    gap: 18px;
 
-    padding: 15px 20px;
+    padding: 20px;
+
+    border-radius: var(--radius);
 
     background: var(--white);
 
     border: 1px solid var(--border);
-
-    border-radius: var(--radius-sm);
 
     box-shadow: var(--shadow-sm);
 
     transition: var(--transition);
 }
 
+
 .usage-item:hover {
-    transform: translateX(7px);
+    transform: translateX(5px);
 
     border-color: var(--yellow);
 }
 
-.usage-item i {
-    width: 42px;
 
-    height: 42px;
+.usage-item i {
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    flex-shrink: 0;
+    border-radius: 12px;
 
-    background: var(--green-dark);
+    background: rgba(244, 197, 66, .15);
 
-    color: var(--yellow);
+    color: var(--green);
 
-    border-radius: 8px;
+    font-size: 19px;
 }
+
 
 .usage-item span {
     color: var(--green-dark);
 
-    font-size: 12px;
+    font-size: 15px;
 
-    font-weight: 700;
+    font-weight: 600;
 
     line-height: 1.5;
 }
 
 
 /* =========================================================
-   SPECIFICATION
-========================================================= */
+   DETAIL SPECIFICATION
+   ========================================================= */
 
 .detail-spec {
-    padding: 110px 0;
+    padding: 100px 0;
 
     background: var(--white);
-
-    overflow: hidden;
 }
+
 
 .detail-spec-heading {
-    margin-bottom: 40px;
-
     text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
 }
 
-.detail-spec-heading p {
-    max-width: 650px;
 
-    margin: 0 auto;
+.detail-spec-heading h2 {
+    margin: 0;
 
-    color: var(--text-light);
+    color: var(--green-dark);
 
-    font-size: 13px;
+    font-size: clamp(30px, 4vw, 46px);
 
-    line-height: 1.8;
+    line-height: 1.1;
+}
+
+
+.detail-spec-heading h2 strong {
+    color: var(--yellow);
 }
 
 
 /* =========================================================
-   SPECIFICATION TABLE
-========================================================= */
+   SPEC TABLE
+   ========================================================= */
 
 .spec-table {
-    width: 100%;
-
     max-width: 900px;
 
     margin: 0 auto;
 
     border: 1px solid var(--border);
 
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
 
     overflow: hidden;
 
-    background: var(--white);
+    box-shadow: var(--shadow-sm);
 }
 
-.spec-row {
-    min-height: 65px;
 
+.spec-row {
     display: grid;
 
     grid-template-columns: 1fr 1.5fr;
 
-    align-items: center;
-
     border-bottom: 1px solid var(--border);
 }
 
+
 .spec-row:last-child {
-    border-bottom: 0;
+    border-bottom: none;
 }
 
-.spec-row:nth-child(even) {
-    background: var(--bg);
-}
 
 .spec-row span,
 .spec-row strong {
-    padding: 16px 22px;
+    padding: 18px 22px;
 
-    font-size: 11px;
-
-    line-height: 1.5;
+    font-size: 15px;
 }
+
 
 .spec-row span {
-    color: var(--text-light);
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-weight: 600;
 }
 
+
 .spec-row strong {
+    background: var(--white);
+
     color: var(--green-dark);
+
+    font-weight: 700;
 }
 
 
 /* =========================================================
    DETAIL CTA
-========================================================= */
+   ========================================================= */
 
 .detail-cta {
-    position: relative;
-
-    padding: 100px 0;
+    padding: 90px 0;
 
     background:
         linear-gradient(
             135deg,
-            rgba(0, 0, 0, 0.97),
-            rgba(0, 0, 0, 0.88)
+            var(--black),
+            var(--black)
         );
-
-    color: var(--white);
-
-    text-align: center;
-
-    overflow: hidden;
 }
 
-.detail-cta::before {
-    content: "";
-
-    position: absolute;
-
-    width: 350px;
-
-    height: 350px;
-
-    top: -180px;
-
-    right: -100px;
-
-    border: 70px solid rgba(244, 197, 66, 0.08);
-
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-.detail-cta::after {
-    content: "";
-
-    position: absolute;
-
-    width: 250px;
-
-    height: 250px;
-
-    bottom: -150px;
-
-    left: -80px;
-
-    border: 50px solid rgba(255, 255, 255, 0.04);
-
-    border-radius: 50%;
-
-    pointer-events: none;
-}
 
 .detail-cta-content {
-    position: relative;
+    max-width: 850px;
 
-    z-index: 2;
+    margin: 0 auto;
 
-    width: 100%;
+    text-align: center;
 }
 
+
 .detail-cta-content > span {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
     color: var(--yellow);
 
-    font-size: 10px;
+    font-size: 13px;
 
     font-weight: 800;
 
     letter-spacing: 2px;
-
-    text-transform: uppercase;
 }
 
-.detail-cta h2 {
-    max-width: 750px;
 
-    margin: 15px auto;
+.detail-cta-content h2 {
+    margin: 0 0 20px;
 
     color: var(--white);
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.15;
 }
 
-.detail-cta h2 strong {
+
+.detail-cta-content h2 strong {
     color: var(--yellow);
 }
 
-.detail-cta p {
-    max-width: 650px;
 
-    margin: 0 auto 28px;
+.detail-cta-content p {
+    max-width: 700px;
 
-    color: rgba(255, 255, 255, 0.72);
+    margin: 0 auto;
 
-    font-size: 13px;
+    color: rgba(255, 255, 255, .8);
+
+    font-size: 16px;
 
     line-height: 1.8;
 }
 
-.detail-cta .detail-button {
+
+.detail-cta-content .detail-button {
+    margin-top: 30px;
+
     background: var(--yellow);
 
     color: var(--green-dark);
 }
 
-.detail-cta .detail-button:hover {
+
+.detail-cta-content .detail-button:hover {
     background: var(--white);
 
     color: var(--green-dark);
@@ -674,542 +986,470 @@
 
 /* =========================================================
    FOOTER
-========================================================= */
+   ========================================================= */
 
-.detail-service-footer {
+.footer {
     background: #000000;
+
+    color: rgba(255, 255, 255, .8);
+}
+
+
+.footer a {
+    color: rgba(255, 255, 255, .8);
+
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+
+.footer a:hover {
+    color: var(--yellow);
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.whatsapp {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #25d366;
+
+    color: #ffffff;
+
+    font-size: 26px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .2);
+
+    z-index: 999;
+
+    transition: .3s ease;
+}
+
+
+.whatsapp:hover {
+    transform: scale(1.1);
 }
 
 
 /* =========================================================
    TABLET
-   MAX WIDTH 1000px
-========================================================= */
+   ========================================================= */
 
 @media (max-width: 1000px) {
 
-    .detail-hero {
-        min-height: 500px;
-
-        padding: 100px 0 70px;
-    }
-
-    .detail-about {
-        padding: 85px 0;
-    }
-
-    .detail-about-grid,
-    .detail-usage-grid {
-
+    .detail-about-grid {
         grid-template-columns: 1fr;
 
-        gap: 50px;
+        gap: 55px;
     }
+
 
     .detail-image {
         width: 100%;
 
-        max-width: 750px;
+        max-width: 600px;
 
         margin: 0 auto;
-
-        padding: 15px;
     }
 
-    .detail-image img {
-        width: 100%;
-
-        height: auto;
-    }
 
     .detail-content {
-        width: 100%;
-
-        max-width: 750px;
-
-        margin: 0 auto;
+        max-width: 100%;
     }
 
-    .usage-title {
-        width: 100%;
 
-        max-width: 750px;
+    .detail-usage-grid {
+        grid-template-columns: 1fr;
 
-        margin: 0 auto;
+        gap: 45px;
     }
 
-    .usage-list {
-        width: 100%;
-
-        max-width: 750px;
-
-        margin: 0 auto;
-    }
-
-    .detail-spec {
-        padding: 85px 0;
-    }
-
-    .detail-cta {
-        padding: 85px 0;
-    }
 }
 
 
 /* =========================================================
-   MOBILE
-   MAX WIDTH 768px
-========================================================= */
+   TABLET SMALL
+   ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* =========================
-       HERO
-    ========================= */
-
     .detail-hero {
-        min-height: 560px;
-
-        padding: 100px 0 60px;
-
-        background-position: center center;
+        min-height: 420px;
     }
 
+
+    .detail-hero-content {
+        padding-top: 60px;
+
+        padding-bottom: 55px;
+    }
+
+
     .detail-hero h1 {
-        max-width: 100%;
-
-        font-size: 42px;
-
-        line-height: 1.08;
-
         letter-spacing: -1px;
     }
 
-    .detail-hero-content > p {
-        max-width: 100%;
 
-        font-size: 12px;
-
-        line-height: 1.8;
-    }
-
-    .detail-breadcrumb {
-        gap: 7px;
-
-        font-size: 9px;
+    .detail-hero p {
+        font-size: 15px;
     }
 
 
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .detail-about {
+    .detail-about,
+    .detail-spec {
         padding: 70px 0;
     }
 
-    .detail-about-grid {
-        gap: 45px;
-    }
-
-
-    /* =========================
-       IMAGE MOBILE
-    ========================= */
-
-    .detail-image {
-
-        /*
-         * Tetap beri ruang untuk
-         * border kuning
-         */
-
-        width: calc(100% - 10px);
-
-        margin-left: 10px;
-
-        padding: 10px;
-    }
-
-    .detail-image::before {
-
-        top: 0;
-
-        left: 0;
-
-        width: calc(100% - 10px);
-
-        height: calc(100% - 10px);
-
-        border-width: 2px;
-
-        border-radius: 12px;
-    }
-
-    .detail-image img {
-
-        display: block;
-
-        width: 100%;
-
-        height: auto;
-
-        max-width: 100%;
-
-        /*
-         * Tidak ada height tetap.
-         * Jadi tidak crop dan tidak gepeng.
-         */
-
-        object-fit: contain;
-
-        border-radius: 10px;
-
-        box-shadow: var(--shadow);
-    }
-
-
-    /* =========================
-       CONTENT
-    ========================= */
-
-    .detail-content h2,
-    .usage-title h2,
-    .detail-spec-heading h2,
-    .detail-cta h2 {
-
-        font-size: 30px;
-
-        line-height: 1.2;
-
-        letter-spacing: -0.5px;
-    }
-
-    .detail-content p {
-        font-size: 12px;
-
-        line-height: 1.8;
-    }
-
-
-    /* =========================
-       BUTTON
-    ========================= */
-
-    .detail-button {
-        width: 100%;
-
-        min-height: 48px;
-    }
-
-
-    /* =========================
-       USAGE
-    ========================= */
 
     .detail-usage {
         padding: 70px 0;
     }
 
-    .detail-usage-grid {
-        gap: 40px;
-    }
 
-    .usage-title p {
-        font-size: 12px;
-
-        line-height: 1.8;
-    }
-
-    .usage-list {
-        gap: 10px;
-    }
-
-    .usage-item {
-        min-height: 65px;
-
-        padding: 13px 15px;
-
-        gap: 12px;
-    }
-
-    .usage-item i {
-        width: 38px;
-
-        height: 38px;
-
-        border-radius: 7px;
-    }
-
-    .usage-item span {
-        font-size: 11px;
-
-        line-height: 1.5;
-    }
-
-
-    /* =========================
-       SPECIFICATION
-    ========================= */
-
-    .detail-spec {
+    .detail-cta {
         padding: 70px 0;
     }
 
-    .detail-spec-heading {
-        margin-bottom: 30px;
-    }
-
-    .detail-spec-heading p {
-        font-size: 12px;
-
-        line-height: 1.8;
-    }
-
-    .spec-table {
-        width: 100%;
-
-        border-radius: 8px;
-    }
-
-    .spec-row {
-
-        /*
-         * Desktop:
-         * label | value
-         *
-         * Mobile:
-         * label
-         * value
-         */
-
-        grid-template-columns: 1fr;
-
-        align-items: stretch;
-
-        padding: 4px 0;
-    }
-
-    .spec-row span,
-    .spec-row strong {
-
-        display: block;
-
-        padding: 8px 15px;
-    }
-
-    .spec-row span {
-
-        padding-bottom: 2px;
-
-        color: var(--green);
-
-        font-size: 9px;
-
-        font-weight: 700;
-    }
-
-    .spec-row strong {
-
-        padding-top: 2px;
-
-        color: var(--green-dark);
-
-        font-size: 11px;
-
-        line-height: 1.5;
-    }
-
-
-    /* =========================
-       CTA
-    ========================= */
-
-    .detail-cta {
-        padding: 75px 0;
-    }
-
-    .detail-cta-content > span {
-        font-size: 9px;
-    }
-
-    .detail-cta p {
-        font-size: 12px;
-
-        line-height: 1.8;
-    }
-
-    .detail-cta::before {
-
-        width: 220px;
-
-        height: 220px;
-
-        top: -120px;
-
-        right: -100px;
-
-        border-width: 45px;
-    }
-
-    .detail-cta::after {
-
-        width: 180px;
-
-        height: 180px;
-
-        bottom: -110px;
-
-        left: -90px;
-
-        border-width: 35px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   MAX WIDTH 420px
-========================================================= */
-
-@media (max-width: 420px) {
-
-    /* HERO */
-
-    .detail-hero {
-        min-height: 540px;
-
-        padding: 95px 0 55px;
-    }
-
-    .detail-hero h1 {
-        font-size: 34px;
-
-        line-height: 1.08;
-    }
-
-    .detail-hero-content > span {
-        font-size: 9px;
-
-        letter-spacing: 1.5px;
-    }
-
-    .detail-hero-content > p {
-        font-size: 11px;
-
-        line-height: 1.8;
-    }
-
-
-    /* ABOUT */
-
-    .detail-about {
-        padding: 60px 0;
-    }
-
-    .detail-about-grid {
-        gap: 38px;
-    }
-
-
-    /* IMAGE */
 
     .detail-image {
+        width: 90%;
 
-        width: calc(100% - 7px);
+        max-width: 520px;
 
-        margin-left: 7px;
-
-        padding: 7px;
+        padding: 12px;
     }
 
-    .detail-image::before {
 
-        width: calc(100% - 7px);
+    .gallery-main {
+        aspect-ratio: 4 / 3;
+    }
 
-        height: calc(100% - 7px);
+
+    .thumbnail {
+        flex-basis: 72px;
+
+        width: 72px;
+
+        height: 56px;
+    }
+
+
+    .spec-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .spec-row span {
+        padding-bottom: 8px;
+    }
+
+
+    .spec-row strong {
+        padding-top: 8px;
+    }
+
+
+    /* LIGHTBOX */
+
+    .image-lightbox {
+        padding: 20px;
+    }
+
+
+    .image-lightbox img {
+        max-width: 94vw;
+
+        max-height: 88vh;
 
         border-radius: 10px;
     }
 
-    .detail-image img {
 
+    .lightbox-close {
+        top: 15px;
+
+        right: 15px;
+
+        width: 42px;
+
+        height: 42px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .detail-hero {
+        min-height: 390px;
+    }
+
+
+    .detail-hero-content {
+        padding-top: 45px;
+
+        padding-bottom: 45px;
+    }
+
+
+    .detail-hero h1 {
+        font-size: 36px;
+    }
+
+
+    .detail-hero p {
+        margin-top: 18px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .detail-breadcrumb {
+        margin-top: 22px;
+
+        font-size: 12px;
+    }
+
+
+    .detail-about,
+    .detail-spec {
+        padding: 55px 0;
+    }
+
+
+    .detail-usage,
+    .detail-cta {
+        padding: 55px 0;
+    }
+
+
+    .detail-image {
         width: 100%;
 
-        height: auto;
+        max-width: 100%;
 
-        border-radius: 8px;
+        padding: 10px;
+    }
+
+
+    .detail-image::before {
+        width: calc(100% - 10px);
+
+        height: calc(100% - 10px);
+    }
+
+
+    /* =========================
+       GALLERY MOBILE
+    ========================== */
+
+    .gallery-main {
+        aspect-ratio: 4 / 3;
+
+        border-radius: 12px;
+
+        background: #f3f3f3;
+    }
+
+
+    .gallery-main img,
+    .gallery-main video {
+        border-radius: 12px;
 
         object-fit: contain;
     }
 
 
-    /* TITLE */
+    .gallery-zoom {
+        right: 10px;
 
-    .detail-content h2,
-    .usage-title h2,
-    .detail-spec-heading h2,
-    .detail-cta h2 {
+        bottom: 10px;
 
-        font-size: 28px;
+        width: 38px;
 
-        line-height: 1.2;
+        height: 38px;
+
+        font-size: 13px;
     }
+
+
+    .gallery-thumbnails {
+        gap: 8px;
+
+        margin-top: 10px;
+    }
+
+
+    .thumbnail {
+        flex: 0 0 68px;
+
+        width: 68px;
+
+        height: 52px;
+
+        border-radius: 7px;
+    }
+
+
+    .video-icon {
+        width: 26px;
+
+        height: 26px;
+
+        font-size: 9px;
+    }
+
+
+    /* =========================
+       LIGHTBOX MOBILE
+    ========================== */
+
+    .image-lightbox {
+        padding: 15px;
+    }
+
+
+    .image-lightbox img {
+        max-width: 96vw;
+
+        max-height: 86vh;
+
+        border-radius: 8px;
+    }
+
+
+    .lightbox-close {
+        top: 12px;
+
+        right: 12px;
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+
+    .detail-content h2 {
+        font-size: 32px;
+    }
+
 
     .detail-content p {
-        font-size: 11px;
+        font-size: 14px;
 
-        line-height: 1.8;
+        line-height: 1.75;
     }
 
 
-    /* USAGE */
+    .detail-button {
+        width: 100%;
+
+        padding: 13px 20px;
+    }
+
+
+    .usage-title h2 {
+        font-size: 32px;
+    }
+
+
+    .usage-title p {
+        font-size: 14px;
+    }
+
 
     .usage-item {
-        min-height: 60px;
+        padding: 15px;
 
-        padding: 10px 12px;
-
-        gap: 10px;
+        gap: 13px;
     }
+
 
     .usage-item i {
+        flex: 0 0 42px;
 
-        width: 35px;
+        width: 42px;
 
-        height: 35px;
+        height: 42px;
 
-        font-size: 12px;
+        font-size: 16px;
     }
+
 
     .usage-item span {
-        font-size: 10px;
+        font-size: 13px;
     }
 
 
-    /* SPEC */
-
-    .spec-row span {
-        font-size: 8px;
+    .detail-spec-heading h2 {
+        font-size: 32px;
     }
 
+
+    .spec-row span,
     .spec-row strong {
-        font-size: 10px;
+        padding: 14px 16px;
+
+        font-size: 13px;
     }
 
 
-    /* CTA */
-
-    .detail-cta {
-        padding: 65px 0;
+    .detail-cta-content h2 {
+        font-size: 32px;
     }
+
+
+    .detail-cta-content p {
+        font-size: 14px;
+    }
+
+
+    .whatsapp {
+        right: 18px;
+
+        bottom: 18px;
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 23px;
+    }
+
 }
 
 
 /* =========================================================
-   EXTRA SMALL
-   MAX WIDTH 360px
-========================================================= */
+   MOBILE VERY SMALL
+   ========================================================= */
 
 @media (max-width: 360px) {
 
@@ -1217,16 +1457,45 @@
         font-size: 31px;
     }
 
+
+    .detail-image {
+        padding: 8px;
+    }
+
+
+    .gallery-main {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    .thumbnail {
+        flex-basis: 62px;
+
+        width: 62px;
+
+        height: 48px;
+    }
+
+
     .detail-content h2,
     .usage-title h2,
     .detail-spec-heading h2,
-    .detail-cta h2 {
+    .detail-cta-content h2 {
 
-        font-size: 26px;
+        font-size: 28px;
+
     }
 
-    .usage-item span {
-        font-size: 9px;
+
+    .image-lightbox {
+        padding: 10px;
+    }
+
+
+    .image-lightbox img {
+        max-width: 97vw;
+
+        max-height: 84vh;
     }
 
 }

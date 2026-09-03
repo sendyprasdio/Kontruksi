@@ -1,7 +1,7 @@
 /* =========================================================
-   DETAIL SERVICE 1
+   DETAIL SERVICE 4
    NIKI SEKAWAN PONDASI
-   BORE PILE HIDROLIK
+   STRAUSS PILE
    ========================================================= */
 
 
@@ -24,7 +24,7 @@
             rgba(0, 0, 0, 0.466),
             rgba(0, 0, 0, 0.397)
         ),
-        url("BORE\ PILE\ HYDRAULIC.jpeg") center/cover no-repeat;
+        url("strauss pile.jpeg") center/cover no-repeat;
 
     overflow: hidden;
 }
@@ -73,7 +73,7 @@
 
 
 .detail-hero h1 strong {
-    color: var(--yellow );
+    color: var(--yellow);
 }
 
 
