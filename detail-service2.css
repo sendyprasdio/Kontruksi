@@ -1221,47 +1221,275 @@ body.lightbox-open {
 
 
 /* =========================================================
+   RESPONSIVE TABLET & ANDROID
+   DETAIL SERVICE 2 — MINI CRANE
+   ========================================================= */
+
+
+/* =========================================================
    TABLET
    ========================================================= */
 
 @media (max-width: 1000px) {
 
+    /* =========================
+       GLOBAL SAFETY
+       ========================= */
+
+    .detail-hero,
+    .detail-about,
+    .detail-usage,
+    .detail-spec,
+    .detail-cta {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .detail-hero-content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .detail-hero h1,
+    .detail-hero p {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+
+    /* =========================
+       TENTANG LAYANAN
+       ========================= */
+
     .detail-about-grid {
+        display: grid;
+
         grid-template-columns: 1fr;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
 
         gap: 55px;
+
+        box-sizing: border-box;
     }
 
 
+    /* GALLERY */
     .detail-gallery {
+        display: block;
+
         width: 100%;
-
         max-width: 600px;
+        min-width: 0;
 
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+
+        box-sizing: border-box;
     }
 
 
-    .detail-content {
+    .gallery-main {
+        width: 100%;
         max-width: 100%;
+
+        aspect-ratio: 4 / 3;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
     }
 
+
+    .gallery-main img,
+    .gallery-main video {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /* THUMBNAILS */
+    .gallery-thumbnails {
+        display: flex;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        gap: 9px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        box-sizing: border-box;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .thumbnail {
+        flex: 0 0 72px;
+
+        width: 72px;
+        min-width: 72px;
+
+        height: 56px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* CONTENT TENTANG */
+    .detail-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .detail-content h2,
+    .detail-content p {
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+
+    /* =========================
+       USAGE
+       ========================= */
 
     .detail-usage-grid {
+        display: grid;
+
         grid-template-columns: 1fr;
 
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
         gap: 45px;
+
+        box-sizing: border-box;
     }
 
+
+    .usage-title,
+    .usage-list {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .usage-title p {
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .usage-item {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .usage-item span {
+        min-width: 0;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+
+    /* =========================
+       SPEC
+       ========================= */
+
+    .spec-table {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    .spec-row {
+        min-width: 0;
+    }
+
+
+    .spec-row span,
+    .spec-row strong {
+        min-width: 0;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       CTA
+       ========================= */
+
+    .detail-cta-content {
+        width: 100%;
+        max-width: 850px;
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .detail-cta-content h2,
+    .detail-cta-content p {
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
 }
 
 
-
 /* =========================================================
-   TABLET SMALL
+   TABLET PORTRAIT
    ========================================================= */
 
 @media (max-width: 768px) {
+
+    /* =========================
+       HERO
+       ========================= */
 
     .detail-hero {
         min-height: 420px;
@@ -1269,21 +1497,61 @@ body.lightbox-open {
 
 
     .detail-hero-content {
-        padding-top: 60px;
+        width: 100%;
 
+        padding-top: 60px;
         padding-bottom: 55px;
+
+        box-sizing: border-box;
     }
 
 
     .detail-hero h1 {
+        max-width: 100%;
+
+        font-size: clamp(36px, 7vw, 52px);
+
+        line-height: 1.08;
+
         letter-spacing: -1px;
+
+        overflow-wrap: break-word;
     }
 
 
     .detail-hero p {
+        max-width: 100%;
+
+        margin-top: 20px;
+
         font-size: 15px;
+
+        line-height: 1.75;
     }
 
+
+    /* =========================
+       BREADCRUMB
+       ========================= */
+
+    .detail-breadcrumb {
+        max-width: 100%;
+
+        margin-top: 25px;
+
+        gap: 8px;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* =========================
+       SECTION SPACING
+       ========================= */
 
     .detail-about,
     .detail-spec {
@@ -1291,39 +1559,222 @@ body.lightbox-open {
     }
 
 
-    .detail-usage {
-        padding: 70px 0;
-    }
-
-
+    .detail-usage,
     .detail-cta {
         padding: 70px 0;
     }
 
 
-    .detail-gallery {
-        width: 90%;
+    /* =====================================================
+       TENTANG LAYANAN — GALLERY
+       ===================================================== */
 
-        max-width: 520px;
+    .detail-about-grid {
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 50px;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .detail-gallery {
+        width: 100% !important;
+        max-width: 560px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        min-width: 0;
+
+        box-sizing: border-box;
     }
 
 
     .gallery-main {
+        display: block;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
         aspect-ratio: 4 / 3;
+
+        border-radius: 14px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    .gallery-main img,
+    .gallery-main video {
+        display: block;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: 100% !important;
+
+        border-radius: 14px;
+
+        object-fit: contain;
+        object-position: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       THUMBNAILS
+       ========================= */
+
+    .gallery-thumbnails {
+        display: flex;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 9px;
+
+        margin-top: 12px;
+
+        padding: 3px 2px 9px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        box-sizing: border-box;
+
+        -webkit-overflow-scrolling: touch;
     }
 
 
     .thumbnail {
-        flex-basis: 72px;
+        flex: 0 0 72px !important;
 
-        width: 72px;
+        width: 72px !important;
+        min-width: 72px !important;
 
         height: 56px;
+
+        box-sizing: border-box;
     }
 
 
+    /* =========================
+       CONTENT TENTANG
+       ========================= */
+
+    .detail-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .detail-content h2 {
+        max-width: 100%;
+
+        font-size: clamp(30px, 6vw, 42px);
+
+        line-height: 1.1;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .detail-content p {
+        max-width: 100%;
+
+        font-size: 15px;
+
+        line-height: 1.8;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* =========================
+       ZOOM
+       ========================= */
+
+    .gallery-zoom {
+        right: 12px;
+        bottom: 12px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       BUTTON
+       ========================= */
+
+    .detail-button {
+        min-height: 48px;
+    }
+
+
+    /* =========================
+       USAGE
+       ========================= */
+
+    .usage-title h2 {
+        font-size: clamp(30px, 6vw, 42px);
+
+        line-height: 1.1;
+    }
+
+
+    .usage-title p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    .usage-list {
+        gap: 13px;
+    }
+
+
+    .usage-item {
+        gap: 15px;
+
+        padding: 17px;
+    }
+
+
+    /* =========================
+       SPEC
+       ========================= */
+
     .spec-row {
         grid-template-columns: 1fr;
+    }
+
+
+    .spec-row span,
+    .spec-row strong {
+        display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
     }
 
 
@@ -1337,6 +1788,36 @@ body.lightbox-open {
     }
 
 
+    .detail-spec-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .detail-spec-heading h2 {
+        font-size: clamp(30px, 6vw, 42px);
+    }
+
+
+    /* =========================
+       CTA
+       ========================= */
+
+    .detail-cta-content h2 {
+        font-size: clamp(30px, 6vw, 42px);
+    }
+
+
+    .detail-cta-content p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    /* =========================
+       LIGHTBOX
+       ========================= */
+
     .image-lightbox {
         padding: 25px;
     }
@@ -1344,34 +1825,36 @@ body.lightbox-open {
 
     .image-lightbox img {
         max-width: 94vw;
-
         max-height: 82vh;
     }
-
 }
 
 
-
 /* =========================================================
-   MOBILE
+   ANDROID / MOBILE
    ========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+
+    /* =========================
+       HERO
+       ========================= */
 
     .detail-hero {
-        min-height: 390px;
+        min-height: 400px;
     }
 
 
     .detail-hero-content {
-        padding-top: 45px;
-
-        padding-bottom: 45px;
+        padding-top: 50px;
+        padding-bottom: 48px;
     }
 
 
     .detail-hero h1 {
-        font-size: 36px;
+        font-size: 38px;
+
+        line-height: 1.08;
     }
 
 
@@ -1384,13 +1867,374 @@ body.lightbox-open {
     }
 
 
+    /* =========================
+       BREADCRUMB
+       ========================= */
+
     .detail-breadcrumb {
-        margin-top: 22px;
+        margin-top: 20px;
+
+        gap: 7px;
 
         font-size: 12px;
+
+        line-height: 1.5;
     }
 
 
+    /* =========================
+       SECTION
+       ========================= */
+
+    .detail-about,
+    .detail-spec {
+        padding: 60px 0;
+    }
+
+
+    .detail-usage,
+    .detail-cta {
+        padding: 60px 0;
+    }
+
+
+    /* =====================================================
+       TENTANG LAYANAN
+       ===================================================== */
+
+    .detail-about-grid {
+        display: grid;
+
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 40px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* GALLERY */
+    .detail-gallery {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+
+    .gallery-main {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        aspect-ratio: 4 / 3;
+
+        border-radius: 12px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    .gallery-main img,
+    .gallery-main video {
+        display: block;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: 100% !important;
+
+        border-radius: 12px;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+
+    /* THUMBNAILS */
+    .gallery-thumbnails {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex;
+
+        gap: 8px;
+
+        margin-top: 10px;
+
+        padding: 3px 2px 8px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        box-sizing: border-box;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .thumbnail {
+        flex: 0 0 68px !important;
+
+        width: 68px !important;
+        min-width: 68px !important;
+
+        height: 52px;
+
+        border-radius: 7px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ZOOM */
+    .gallery-zoom {
+        right: 10px;
+        bottom: 10px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 13px;
+    }
+
+
+    /* VIDEO ICON */
+    .video-icon {
+        width: 26px;
+        height: 26px;
+
+        font-size: 9px;
+    }
+
+
+    /* CONTENT */
+    .detail-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .detail-content h2 {
+        font-size: 32px;
+
+        line-height: 1.1;
+    }
+
+
+    .detail-content p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    /* BUTTON */
+    .detail-button {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 13px 18px;
+
+        min-height: 48px;
+
+        font-size: 14px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       USAGE
+       ========================= */
+
+    .usage-title h2 {
+        font-size: 32px;
+
+        line-height: 1.1;
+    }
+
+
+    .usage-title p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    .usage-list {
+        gap: 12px;
+    }
+
+
+    .usage-item {
+        width: 100%;
+
+        gap: 13px;
+
+        padding: 15px;
+
+        box-sizing: border-box;
+    }
+
+
+    .usage-item i {
+        flex: 0 0 42px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 16px;
+    }
+
+
+    .usage-item span {
+        min-width: 0;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* =========================
+       SPEC
+       ========================= */
+
+    .detail-spec-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .detail-spec-heading h2 {
+        font-size: 32px;
+    }
+
+
+    .spec-row span,
+    .spec-row strong {
+        width: 100%;
+
+        padding: 14px 16px;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        box-sizing: border-box;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* =========================
+       CTA
+       ========================= */
+
+    .detail-cta-content h2 {
+        font-size: 32px;
+
+        line-height: 1.15;
+    }
+
+
+    .detail-cta-content p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    .detail-cta-content .detail-button {
+        margin-top: 25px;
+    }
+
+
+    /* =========================
+       WHATSAPP
+       ========================= */
+
+    .whatsapp {
+        right: 18px;
+        bottom: 18px;
+
+        width: 52px;
+        height: 52px;
+
+        font-size: 23px;
+    }
+
+
+    /* =========================
+       LIGHTBOX
+       ========================= */
+
+    .image-lightbox {
+        padding: 15px;
+    }
+
+
+    .image-lightbox img {
+        max-width: 96vw;
+        max-height: 78vh;
+
+        border-radius: 7px;
+    }
+
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================================
+   ANDROID NORMAL
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .detail-hero {
+        min-height: 390px;
+    }
+
+
+    .detail-hero-content {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+
+    .detail-hero h1 {
+        font-size: 36px;
+    }
+
+
+    .detail-hero p {
+        font-size: 14px;
+    }
+
+
+    /* SECTION */
     .detail-about,
     .detail-spec {
         padding: 55px 0;
@@ -1403,113 +2247,78 @@ body.lightbox-open {
     }
 
 
-    .detail-gallery {
-        width: 100%;
+    /* =========================
+       TENTANG — GALLERY
+       ========================= */
 
-        max-width: 100%;
+    .detail-about-grid {
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 35px;
+    }
+
+
+    .detail-gallery {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
     }
 
 
     .gallery-main {
+        width: 100% !important;
+        max-width: 100% !important;
+
         aspect-ratio: 4 / 3;
-
-        border-radius: 12px;
-    }
-
-
-    .gallery-main img,
-    .gallery-main video {
-        border-radius: 12px;
-    }
-
-
-    .gallery-zoom {
-        right: 10px;
-
-        bottom: 10px;
-
-        width: 38px;
-
-        height: 38px;
-
-        font-size: 13px;
     }
 
 
     .gallery-thumbnails {
-        gap: 8px;
+        width: 100% !important;
+        max-width: 100% !important;
 
-        margin-top: 10px;
+        gap: 8px;
     }
 
 
     .thumbnail {
-        flex:
-            0 0 68px;
+        flex: 0 0 65px !important;
 
-        width: 68px;
+        width: 65px !important;
+        min-width: 65px !important;
 
-        height: 52px;
-
-        border-radius: 7px;
+        height: 50px;
     }
 
 
-    .video-icon {
-        width: 26px;
-
-        height: 26px;
-
-        font-size: 9px;
+    /* CONTENT */
+    .detail-content h2,
+    .usage-title h2,
+    .detail-spec-heading h2,
+    .detail-cta-content h2 {
+        font-size: 31px;
     }
 
 
-    .detail-content h2 {
-        font-size: 32px;
-    }
-
-
-    .detail-content p {
-        font-size: 14px;
-
-        line-height: 1.75;
-    }
-
-
-    .detail-button {
-        width: 100%;
-
-        padding:
-            13px 20px;
-    }
-
-
-    .usage-title h2 {
-        font-size: 32px;
-    }
-
-
-    .usage-title p {
-        font-size: 14px;
-    }
-
-
+    /* USAGE */
     .usage-item {
-        padding: 15px;
+        padding: 14px;
 
-        gap: 13px;
+        gap: 12px;
     }
 
 
     .usage-item i {
-        flex:
-            0 0 42px;
+        flex: 0 0 40px;
 
-        width: 42px;
+        width: 40px;
+        height: 40px;
 
-        height: 42px;
-
-        font-size: 16px;
+        font-size: 15px;
     }
 
 
@@ -1518,107 +2327,270 @@ body.lightbox-open {
     }
 
 
-    .detail-spec-heading h2 {
-        font-size: 32px;
-    }
-
-
+    /* SPEC */
     .spec-row span,
     .spec-row strong {
-        padding:
-            14px 16px;
+        padding: 13px 14px;
 
         font-size: 13px;
     }
-
-
-    .detail-cta-content h2 {
-        font-size: 32px;
-    }
-
-
-    .detail-cta-content p {
-        font-size: 14px;
-    }
-
-
-    .whatsapp {
-        right: 18px;
-
-        bottom: 18px;
-
-        width: 52px;
-
-        height: 52px;
-
-        font-size: 23px;
-    }
-
-
-    /* LIGHTBOX MOBILE */
-
-    .image-lightbox {
-        padding: 15px;
-    }
-
-
-    .image-lightbox img {
-        max-width: 96vw;
-
-        max-height: 78vh;
-
-        border-radius: 7px;
-    }
-
-
-    .lightbox-close {
-        top: 15px;
-
-        right: 15px;
-
-        width: 42px;
-
-        height: 42px;
-
-        font-size: 18px;
-    }
-
 }
 
 
-
 /* =========================================================
-   MOBILE VERY SMALL
+   ANDROID KECIL
    ========================================================= */
 
 @media (max-width: 360px) {
 
+    /* =========================
+       HERO
+       ========================= */
+
+    .detail-hero {
+        min-height: 370px;
+    }
+
+
+    .detail-hero-content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+
     .detail-hero h1 {
         font-size: 31px;
+
+        letter-spacing: -.5px;
+    }
+
+
+    .detail-hero p {
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    /* BREADCRUMB */
+    .detail-breadcrumb {
+        font-size: 11px;
+
+        gap: 6px;
+    }
+
+
+    /* SECTION */
+    .detail-about,
+    .detail-spec {
+        padding: 48px 0;
+    }
+
+
+    .detail-usage,
+    .detail-cta {
+        padding: 48px 0;
+    }
+
+
+    /* =========================
+       TENTANG — GALLERY
+       ========================= */
+
+    .detail-about-grid {
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 30px;
+    }
+
+
+    .detail-gallery {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
     }
 
 
     .gallery-main {
+        width: 100% !important;
+        max-width: 100% !important;
+
         aspect-ratio: 4 / 3;
+
+        border-radius: 10px;
+    }
+
+
+    .gallery-main img,
+    .gallery-main video {
+        width: 100% !important;
+        height: 100% !important;
+
+        border-radius: 10px;
+    }
+
+
+    .gallery-zoom {
+        width: 36px;
+        height: 36px;
+
+        right: 8px;
+        bottom: 8px;
+    }
+
+
+    .gallery-thumbnails {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        gap: 7px;
     }
 
 
     .thumbnail {
-        flex-basis: 62px;
+        flex: 0 0 62px !important;
 
-        width: 62px;
+        width: 62px !important;
+        min-width: 62px !important;
 
         height: 48px;
     }
 
 
+    /* CONTENT */
     .detail-content h2,
     .usage-title h2,
     .detail-spec-heading h2,
     .detail-cta-content h2 {
-
         font-size: 28px;
+    }
 
+
+    .detail-content p,
+    .usage-title p,
+    .detail-cta-content p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* BUTTON */
+    .detail-button {
+        padding: 12px 16px;
+
+        font-size: 13px;
+    }
+
+
+    /* USAGE */
+    .usage-item {
+        padding: 12px;
+
+        gap: 10px;
+    }
+
+
+    .usage-item i {
+        flex: 0 0 38px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 14px;
+    }
+
+
+    .usage-item span {
+        font-size: 12px;
+    }
+
+
+    /* SPEC */
+    .spec-row span,
+    .spec-row strong {
+        padding: 12px;
+
+        font-size: 12px;
+    }
+
+
+    /* WHATSAPP */
+    .whatsapp {
+        right: 14px;
+        bottom: 14px;
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 21px;
+    }
+
+
+    /* LIGHTBOX */
+    .image-lightbox {
+        padding: 10px;
+    }
+
+
+    .image-lightbox img {
+        max-width: 97vw;
+        max-height: 76vh;
+    }
+
+
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   FINAL MOBILE SAFETY
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .detail-about-grid,
+    .detail-usage-grid,
+    .detail-content,
+    .usage-title,
+    .usage-list,
+    .detail-spec-heading,
+    .detail-cta-content {
+        min-width: 0;
+    }
+
+
+    .detail-content h2,
+    .detail-content p,
+    .usage-title h2,
+    .usage-title p,
+    .detail-spec-heading h2,
+    .detail-cta-content h2,
+    .detail-cta-content p {
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+
+    .gallery-main,
+    .detail-gallery,
+    .gallery-thumbnails {
+        min-width: 0;
+        box-sizing: border-box;
     }
 
 }

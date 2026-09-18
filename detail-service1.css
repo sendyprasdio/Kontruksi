@@ -1035,10 +1035,44 @@ body.lightbox-open {
 
 
 /* =========================================================
-   TABLET
+   RESPONSIVE DETAIL SERVICE 2
+   MINI CRANE
+   TABLET + ANDROID
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   MAX WIDTH 1000PX
    ========================================================= */
 
 @media (max-width: 1000px) {
+
+    /* ================= GENERAL ================= */
+
+    .detail-hero,
+    .detail-about,
+    .detail-usage,
+    .detail-spec,
+    .detail-cta {
+        overflow: hidden;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .detail-hero-content {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .detail-hero h1,
+    .detail-hero p {
+        max-width: 100%;
+    }
+
+
+    /* ================= ABOUT ================= */
 
     .detail-about-grid {
         grid-template-columns: 1fr;
@@ -1047,19 +1081,29 @@ body.lightbox-open {
     }
 
 
-    .detail-image {
+    /* ================= GALLERY ================= */
+
+    .detail-gallery {
         width: 100%;
 
         max-width: 600px;
 
         margin: 0 auto;
+
+        box-sizing: border-box;
     }
 
 
     .detail-content {
+        width: 100%;
+
         max-width: 100%;
+
+        box-sizing: border-box;
     }
 
+
+    /* ================= USAGE ================= */
 
     .detail-usage-grid {
         grid-template-columns: 1fr;
@@ -1067,78 +1111,357 @@ body.lightbox-open {
         gap: 45px;
     }
 
+
+    .usage-title,
+    .usage-list {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
 }
 
 
+
 /* =========================================================
-   TABLET SMALL
+   TABLET PORTRAIT
+   MAX WIDTH 768PX
    ========================================================= */
 
 @media (max-width: 768px) {
 
+    /* =====================================================
+       GENERAL
+       ===================================================== */
+
+    .detail-hero,
+    .detail-about,
+    .detail-usage,
+    .detail-spec,
+    .detail-cta {
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
     .detail-hero {
         min-height: 420px;
+
+        background-position: center center;
     }
 
 
     .detail-hero-content {
+        width: 100%;
+
         padding-top: 60px;
 
         padding-bottom: 55px;
+
+        box-sizing: border-box;
     }
 
 
     .detail-hero h1 {
+        max-width: 100%;
+
+        font-size: clamp(36px, 7vw, 52px);
+
+        line-height: 1.08;
+
         letter-spacing: -1px;
+
+        overflow-wrap: break-word;
     }
 
 
     .detail-hero p {
+        max-width: 100%;
+
+        margin-top: 20px;
+
         font-size: 15px;
+
+        line-height: 1.75;
+
+        overflow-wrap: break-word;
     }
 
 
-    .detail-about,
-    .detail-spec {
+    /* =====================================================
+       BREADCRUMB
+       ===================================================== */
+
+    .detail-breadcrumb {
+        max-width: 100%;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        margin-top: 25px;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    .detail-about {
         padding: 70px 0;
     }
 
+
+    .detail-about-grid {
+        width: 100%;
+
+        gap: 50px;
+    }
+
+
+    /* =====================================================
+       GALLERY
+       ===================================================== */
+
+    .detail-gallery {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       MAIN IMAGE / VIDEO
+       ===================================================== */
+
+    .gallery-main {
+        width: 100%;
+
+        aspect-ratio: 4 / 3;
+
+        border-radius: var(--radius-lg);
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+    }
+
+
+    .gallery-main img,
+    .gallery-main video {
+        display: block;
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: contain;
+
+        object-position: center;
+
+        border-radius: var(--radius-lg);
+    }
+
+
+    /* =====================================================
+       ZOOM BUTTON
+       ===================================================== */
+
+    .gallery-zoom {
+        right: 12px;
+
+        bottom: 12px;
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 14px;
+    }
+
+
+    /* =====================================================
+       THUMBNAILS
+       ===================================================== */
+
+    .gallery-thumbnails {
+        width: 100%;
+
+        max-width: 100%;
+
+        display: flex;
+
+        gap: 9px;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        padding: 3px 2px 9px;
+
+        margin-top: 12px;
+
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: thin;
+
+        box-sizing: border-box;
+    }
+
+
+    .thumbnail {
+        flex: 0 0 72px;
+
+        width: 72px;
+
+        min-width: 72px;
+
+        height: 56px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       CONTENT / TENTANG LAYANAN
+       ===================================================== */
+
+    .detail-content {
+        width: 100%;
+
+        max-width: 100%;
+
+        box-sizing: border-box;
+
+        min-width: 0;
+    }
+
+
+    .detail-content h2 {
+        overflow-wrap: break-word;
+
+        line-height: 1.12;
+    }
+
+
+    .detail-content p {
+        overflow-wrap: break-word;
+    }
+
+
+    /* =====================================================
+       USAGE / KEGUNAAN LAYANAN
+       ===================================================== */
 
     .detail-usage {
         padding: 70px 0;
     }
 
 
-    .detail-cta {
+    .detail-usage-grid {
+        width: 100%;
+
+        gap: 40px;
+    }
+
+
+    .usage-title {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .usage-title h2 {
+        line-height: 1.12;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .usage-title p {
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .usage-list {
+        width: 100%;
+
+        max-width: 100%;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .usage-item {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       SPECIFICATION
+       ===================================================== */
+
+    .detail-spec {
         padding: 70px 0;
     }
 
 
-    .detail-image {
-        width: 90%;
+    .detail-spec-heading {
+        width: 100%;
 
-        max-width: 520px;
+        max-width: 700px;
 
-        padding: 12px;
+        box-sizing: border-box;
     }
 
 
-    .gallery-main {
-        aspect-ratio: 4 / 3;
-    }
+    .spec-table {
+        width: 100%;
 
+        max-width: 100%;
 
-    .thumbnail {
-        flex-basis: 72px;
-
-        width: 72px;
-
-        height: 56px;
+        box-sizing: border-box;
     }
 
 
     .spec-row {
         grid-template-columns: 1fr;
+    }
+
+
+    .spec-row span,
+    .spec-row strong {
+        width: 100%;
+
+        box-sizing: border-box;
+
+        overflow-wrap: break-word;
     }
 
 
@@ -1153,11 +1476,39 @@ body.lightbox-open {
 
 
     /* =====================================================
-       LIGHTBOX TABLET
+       CTA
+       ===================================================== */
+
+    .detail-cta {
+        padding: 70px 0;
+    }
+
+
+    .detail-cta-content {
+        width: 100%;
+
+        max-width: 850px;
+
+        box-sizing: border-box;
+
+        min-width: 0;
+    }
+
+
+    .detail-cta-content h2,
+    .detail-cta-content p {
+        overflow-wrap: break-word;
+    }
+
+
+    /* =====================================================
+       LIGHTBOX
        ===================================================== */
 
     .image-lightbox {
         padding: 20px;
+
+        box-sizing: border-box;
     }
 
 
@@ -1183,26 +1534,34 @@ body.lightbox-open {
 }
 
 
+
 /* =========================================================
-   MOBILE
+   LARGE ANDROID / SMALL TABLET
+   MAX WIDTH 600PX
    ========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+
+    /* ================= HERO ================= */
 
     .detail-hero {
-        min-height: 390px;
+        min-height: 400px;
     }
 
 
     .detail-hero-content {
-        padding-top: 45px;
+        padding-top: 50px;
 
         padding-bottom: 45px;
     }
 
 
     .detail-hero h1 {
-        font-size: 36px;
+        font-size: clamp(32px, 8vw, 38px);
+
+        line-height: 1.08;
+
+        letter-spacing: -.8px;
     }
 
 
@@ -1215,79 +1574,80 @@ body.lightbox-open {
     }
 
 
+    /* ================= BREADCRUMB ================= */
+
     .detail-breadcrumb {
-        margin-top: 22px;
+        margin-top: 20px;
+
+        gap: 7px;
 
         font-size: 12px;
     }
 
 
-    .detail-about,
-    .detail-spec {
-        padding: 55px 0;
+    /* ================= ABOUT ================= */
+
+    .detail-about {
+        padding: 60px 0;
     }
 
 
-    .detail-usage,
-    .detail-cta {
-        padding: 55px 0;
+    .detail-about-grid {
+        gap: 40px;
     }
 
 
-    .detail-image {
+    /* ================= GALLERY ================= */
+
+    .detail-gallery {
         width: 100%;
 
         max-width: 100%;
-
-        padding: 10px;
     }
 
-
-    .detail-image::before {
-        width: calc(100% - 10px);
-
-        height: calc(100% - 10px);
-    }
-
-
-    /* =====================================================
-       GALLERY MOBILE
-       ===================================================== */
 
     .gallery-main {
+        width: 100%;
+
         aspect-ratio: 4 / 3;
 
         border-radius: 12px;
-
-        background: #f3f3f3;
     }
 
 
     .gallery-main img,
     .gallery-main video {
-        border-radius: 12px;
+        width: 100%;
 
-        object-fit: contain;
+        height: 100%;
+
+        border-radius: 12px;
     }
 
+
+    /* ================= ZOOM ================= */
 
     .gallery-zoom {
         right: 10px;
 
         bottom: 10px;
 
-        width: 38px;
+        width: 40px;
 
-        height: 38px;
+        height: 40px;
 
-        font-size: 13px;
+        font-size: 14px;
     }
 
+
+    /* ================= THUMBNAILS ================= */
 
     .gallery-thumbnails {
         gap: 8px;
 
         margin-top: 10px;
+
+        padding: 3px 2px 8px;
     }
 
 
@@ -1295,6 +1655,8 @@ body.lightbox-open {
         flex: 0 0 68px;
 
         width: 68px;
+
+        min-width: 68px;
 
         height: 52px;
 
@@ -1311,9 +1673,227 @@ body.lightbox-open {
     }
 
 
-    /* =====================================================
-       LIGHTBOX MOBILE
-       ===================================================== */
+    /* ================= CONTENT ================= */
+
+    .detail-label {
+        margin-bottom: 12px;
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .detail-content h2 {
+        margin-bottom: 20px;
+
+        font-size: clamp(29px, 8vw, 34px);
+
+        line-height: 1.12;
+    }
+
+
+    .detail-content p {
+        margin-bottom: 16px;
+
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    /* ================= BUTTON ================= */
+
+    .detail-button {
+        width: 100%;
+
+        min-height: 48px;
+
+        margin-top: 12px;
+
+        padding: 13px 18px;
+
+        box-sizing: border-box;
+
+        font-size: 13px;
+    }
+
+
+    /* ================= USAGE ================= */
+
+    .detail-usage {
+        padding: 60px 0;
+    }
+
+
+    .detail-usage-grid {
+        gap: 35px;
+    }
+
+
+    .usage-title h2 {
+        font-size: clamp(29px, 8vw, 34px);
+
+        line-height: 1.12;
+    }
+
+
+    .usage-title p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    /* ================= USAGE ITEM ================= */
+
+    .usage-list {
+        gap: 10px;
+    }
+
+
+    .usage-item {
+        display: flex;
+
+        align-items: center;
+
+        gap: 12px;
+
+        padding: 14px;
+
+        border-radius: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    .usage-item i {
+        flex: 0 0 42px;
+
+        width: 42px;
+
+        height: 42px;
+
+        border-radius: 10px;
+
+        font-size: 16px;
+    }
+
+
+    .usage-item span {
+        min-width: 0;
+
+        font-size: 13px;
+
+        line-height: 1.45;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* ================= SPEC ================= */
+
+    .detail-spec {
+        padding: 60px 0;
+    }
+
+
+    .detail-spec-heading {
+        margin-bottom: 30px;
+    }
+
+
+    .detail-spec-heading h2 {
+        font-size: clamp(29px, 8vw, 34px);
+
+        line-height: 1.12;
+    }
+
+
+    .spec-table {
+        border-radius: 12px;
+    }
+
+
+    .spec-row span,
+    .spec-row strong {
+        width: 100%;
+
+        padding: 13px 15px;
+
+        box-sizing: border-box;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .spec-row span {
+        padding-bottom: 5px;
+    }
+
+
+    .spec-row strong {
+        padding-top: 5px;
+    }
+
+
+    /* ================= CTA ================= */
+
+    .detail-cta {
+        padding: 60px 0;
+    }
+
+
+    .detail-cta-content > span {
+        margin-bottom: 12px;
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .detail-cta-content h2 {
+        margin-bottom: 16px;
+
+        font-size: clamp(29px, 8vw, 34px);
+
+        line-height: 1.15;
+    }
+
+
+    .detail-cta-content p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+
+    .detail-cta-content .detail-button {
+        margin-top: 22px;
+    }
+
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp {
+        right: 18px;
+
+        bottom: 18px;
+
+        width: 52px;
+
+        height: 52px;
+
+        font-size: 23px;
+    }
+
+
+    /* ================= LIGHTBOX ================= */
 
     .image-lightbox {
         padding: 15px;
@@ -1341,114 +1921,56 @@ body.lightbox-open {
         font-size: 18px;
     }
 
-
-    /* =====================================================
-       CONTENT MOBILE
-       ===================================================== */
-
-    .detail-content h2 {
-        font-size: 32px;
-    }
-
-
-    .detail-content p {
-        font-size: 14px;
-
-        line-height: 1.75;
-    }
-
-
-    .detail-button {
-        width: 100%;
-
-        padding: 13px 20px;
-    }
-
-
-    .usage-title h2 {
-        font-size: 32px;
-    }
-
-
-    .usage-title p {
-        font-size: 14px;
-    }
-
-
-    .usage-item {
-        padding: 15px;
-
-        gap: 13px;
-    }
-
-
-    .usage-item i {
-        flex: 0 0 42px;
-
-        width: 42px;
-
-        height: 42px;
-
-        font-size: 16px;
-    }
-
-
-    .usage-item span {
-        font-size: 13px;
-    }
-
-
-    .detail-spec-heading h2 {
-        font-size: 32px;
-    }
-
-
-    .spec-row span,
-    .spec-row strong {
-        padding: 14px 16px;
-
-        font-size: 13px;
-    }
-
-
-    .detail-cta-content h2 {
-        font-size: 32px;
-    }
-
-
-    .detail-cta-content p {
-        font-size: 14px;
-    }
-
-
-    .whatsapp {
-        right: 18px;
-
-        bottom: 18px;
-
-        width: 52px;
-
-        height: 52px;
-
-        font-size: 23px;
-    }
-
 }
 
 
+
 /* =========================================================
-   MOBILE VERY SMALL
+   NORMAL ANDROID
+   MAX WIDTH 480PX
    ========================================================= */
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 
-    .detail-hero h1 {
-        font-size: 31px;
+    /* ================= HERO ================= */
+
+    .detail-hero {
+        min-height: 390px;
     }
 
 
-    .detail-image {
-        padding: 8px;
+    .detail-hero-content {
+        padding-top: 45px;
+
+        padding-bottom: 45px;
+    }
+
+
+    .detail-hero h1 {
+        font-size: 34px;
+
+        line-height: 1.08;
+    }
+
+
+    .detail-hero p {
+        font-size: 13.5px;
+
+        line-height: 1.7;
+    }
+
+
+    .detail-breadcrumb {
+        font-size: 11.5px;
+    }
+
+
+    /* ================= GALLERY ================= */
+
+    .detail-gallery {
+        width: 100%;
+
+        max-width: 100%;
     }
 
 
@@ -1457,12 +1979,202 @@ body.lightbox-open {
     }
 
 
+    .gallery-zoom {
+        width: 38px;
+
+        height: 38px;
+
+        right: 9px;
+
+        bottom: 9px;
+    }
+
+
     .thumbnail {
-        flex-basis: 62px;
+        flex: 0 0 65px;
 
-        width: 62px;
+        width: 65px;
 
-        height: 48px;
+        min-width: 65px;
+
+        height: 50px;
+    }
+
+
+    /* ================= CONTENT ================= */
+
+    .detail-content h2,
+    .usage-title h2,
+    .detail-spec-heading h2,
+    .detail-cta-content h2 {
+        font-size: 31px;
+    }
+
+
+    .detail-content p,
+    .usage-title p,
+    .detail-cta-content p {
+        font-size: 13.5px;
+    }
+
+
+    /* ================= USAGE ================= */
+
+    .usage-item {
+        padding: 13px;
+    }
+
+
+    .usage-item i {
+        flex: 0 0 40px;
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 15px;
+    }
+
+
+    .usage-item span {
+        font-size: 12.5px;
+    }
+
+
+    /* ================= SPEC ================= */
+
+    .spec-row span,
+    .spec-row strong {
+        padding: 12px 14px;
+
+        font-size: 12.5px;
+    }
+
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp {
+        right: 16px;
+
+        bottom: 16px;
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 22px;
+    }
+
+}
+
+
+
+/* =========================================================
+   SMALL ANDROID
+   MAX WIDTH 360PX
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    /* ================= HERO ================= */
+
+    .detail-hero {
+        min-height: 375px;
+    }
+
+
+    .detail-hero-content {
+        padding-top: 40px;
+
+        padding-bottom: 40px;
+    }
+
+
+    .detail-hero h1 {
+        font-size: 29px;
+
+        line-height: 1.08;
+    }
+
+
+    .detail-hero p {
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    .detail-breadcrumb {
+        margin-top: 18px;
+
+        font-size: 10.5px;
+
+        gap: 6px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .detail-about {
+        padding: 50px 0;
+    }
+
+
+    .detail-about-grid {
+        gap: 35px;
+    }
+
+
+    /* ================= GALLERY ================= */
+
+    .gallery-main {
+        aspect-ratio: 4 / 3;
+
+        border-radius: 10px;
+    }
+
+
+    .gallery-main img,
+    .gallery-main video {
+        border-radius: 10px;
+    }
+
+
+    .gallery-zoom {
+        width: 35px;
+
+        height: 35px;
+
+        right: 8px;
+
+        bottom: 8px;
+
+        font-size: 12px;
+    }
+
+
+    .gallery-thumbnails {
+        gap: 7px;
+    }
+
+
+    .thumbnail {
+        flex: 0 0 60px;
+
+        width: 60px;
+
+        min-width: 60px;
+
+        height: 46px;
+    }
+
+
+    /* ================= CONTENT ================= */
+
+    .detail-label {
+        font-size: 10px;
+
+        letter-spacing: 1.3px;
     }
 
 
@@ -1470,11 +2182,94 @@ body.lightbox-open {
     .usage-title h2,
     .detail-spec-heading h2,
     .detail-cta-content h2 {
+        font-size: 27px;
 
-        font-size: 28px;
-
+        line-height: 1.15;
     }
 
+
+    .detail-content p,
+    .usage-title p,
+    .detail-cta-content p {
+        font-size: 12.5px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ================= BUTTON ================= */
+
+    .detail-button {
+        min-height: 45px;
+
+        padding: 11px 15px;
+
+        font-size: 12px;
+    }
+
+
+    /* ================= USAGE ================= */
+
+    .detail-usage {
+        padding: 50px 0;
+    }
+
+
+    .usage-item {
+        gap: 9px;
+
+        padding: 11px;
+    }
+
+
+    .usage-item i {
+        flex: 0 0 37px;
+
+        width: 37px;
+
+        height: 37px;
+
+        font-size: 14px;
+    }
+
+
+    .usage-item span {
+        font-size: 11.5px;
+
+        line-height: 1.4;
+    }
+
+
+    /* ================= SPEC ================= */
+
+    .detail-spec {
+        padding: 50px 0;
+    }
+
+
+    .detail-spec-heading {
+        margin-bottom: 25px;
+    }
+
+
+    .spec-row span,
+    .spec-row strong {
+        padding: 10px 11px;
+
+        font-size: 11.5px;
+
+        line-height: 1.45;
+    }
+
+
+    /* ================= CTA ================= */
+
+    .detail-cta {
+        padding: 50px 0;
+    }
+
+
+    /* ================= LIGHTBOX ================= */
 
     .image-lightbox {
         padding: 10px;
@@ -1485,6 +2280,67 @@ body.lightbox-open {
         max-width: 97vw;
 
         max-height: 84vh;
+    }
+
+
+    .lightbox-close {
+        top: 10px;
+
+        right: 10px;
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 17px;
+    }
+
+
+    /* ================= WHATSAPP ================= */
+
+    .whatsapp {
+        right: 14px;
+
+        bottom: 14px;
+
+        width: 47px;
+
+        height: 47px;
+
+        font-size: 20px;
+    }
+
+}
+
+
+
+/* =========================================================
+   EXTRA SAFETY
+   PREVENT HORIZONTAL SCROLL
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .detail-hero *,
+    .detail-about *,
+    .detail-usage *,
+    .detail-spec *,
+    .detail-cta * {
+        max-width: 100%;
+    }
+
+
+    .gallery-thumbnails {
+        scrollbar-width: thin;
+    }
+
+
+    .detail-content,
+    .usage-title,
+    .usage-list,
+    .detail-spec-heading,
+    .detail-cta-content {
+        min-width: 0;
     }
 
 }
